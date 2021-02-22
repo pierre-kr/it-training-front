@@ -1,27 +1,26 @@
-# ItTrainingFront
+# IT-Training (Front-end)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+Projet réalisé par :
+- Quentin HORGNIES-CUVELIER
+- Pierre KREPA
+- Ahmed SLIMANI
 
-## Development server
+## Pré-requis
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Installer node.js :
+https://nodejs.org/en/download/
 
-## Code scaffolding
+## Présentation du projet
+Application front-end du site d'IT-Training, entreprise fictive de formation.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Lancement du projet
 
-## Build
+1. Télécharger le projet dans un dossier de votre choix
+2. Ouvrir un terminal dans le dossier du projet
+3. Taper les commandes suivantes :
+   1. npm i
+   2. ng serve -o
+4. Le projet est lancé sur l'adresse "localhost:4200"
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
