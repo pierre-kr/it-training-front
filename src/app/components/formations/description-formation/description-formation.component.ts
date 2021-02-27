@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-description-formation',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./description-formation.component.css']
 })
 export class DescriptionFormationComponent implements OnInit {
+
+
+  @Input() concernedPublic: string;
+  @Input() prerequis: string;
+  @Input() description: string;
+  @Input() contenu: string;
 
   constructor() { }
 

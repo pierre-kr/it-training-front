@@ -1,10 +1,12 @@
 <div class="formation">
     <div class="titre">
-        <h1>Initiation Java</h1>
+        <h1>{{formation.titre}}</h1>
     </div>
     <div class="contenu-formation">
         <div class="description-formation">
-            <app-description-formation></app-description-formation>
+            <app-description-formation [description]="formation.description" [contenu]="formation.contenu"
+                [concernedPublic]="formation.concernedPublic" [prerequis]="formation.prerequis">
+            </app-description-formation>
         </div>
         <div class="important-info">
             <app-important-informations-formation></app-important-informations-formation>

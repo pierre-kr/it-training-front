@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Formation } from 'src/app/models/Formation';
+import { FormationService } from 'src/app/services/formation.service';
 
 @Component({
   selector: 'app-formation',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormationComponent implements OnInit {
 
-  constructor() { }
+
+  formation: Formation;
+
+  constructor(private formationService: FormationService) { }
 
   ngOnInit(): void {
+    this.formation = this.formationService.findById(1);
+    console.log(this.formation);
   }
 
 }
