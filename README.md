@@ -21,6 +21,3 @@ Application front-end du site d'IT-Training, entreprise fictive de formation.
    1. npm i
    2. ng serve -o
 4. Le projet est lancé sur l'adresse "localhost:4200"
- 
-
-
