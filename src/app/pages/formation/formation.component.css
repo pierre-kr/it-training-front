@@ -1,0 +1,20 @@
+.formation {
+    background-color: cyan;
+    padding: 2%;
+}
+
+
+.contenu-formation{
+ display: flex; 
+ justify-content: space-between;  
+}
+
+.description-formation{
+    width: 70%;
+    background-color: orange;
+}
+.important-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+}
