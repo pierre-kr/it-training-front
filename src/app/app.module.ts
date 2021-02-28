@@ -24,7 +24,7 @@ import { ImportantInformationsFormationComponent } from './components/formations
     FormationComponent,
     DescriptionFormationComponent,
     SessionsOfFormationComponent,
-    ImportantInformationsFormationComponent
+    ImportantInformationsFormationComponent,
   ],
   imports: [
     BrowserModule,

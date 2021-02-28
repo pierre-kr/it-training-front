@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Session } from 'src/app/models/Session';
+import { SessionService } from 'src/app/services/session.service';
 
 @Component({
   selector: 'app-sessions-of-formation',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SessionsOfFormationComponent implements OnInit {
 
-  constructor() { }
+  session:Session
+
+  constructor(private sessionService:SessionService) { }
 
   ngOnInit(): void {
+    this.session = this.sessionService.findById(1);
+    console.log(this.session);
   }
 
 }

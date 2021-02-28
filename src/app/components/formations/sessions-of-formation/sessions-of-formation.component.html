@@ -1,8 +1,20 @@
 <div class="sessions">
-    <h1>sessions</h1>
-    <div>session1</div>
-    <p-divider></p-divider>
-    <div>session2</div>
-    <p-divider></p-divider>
-    <div>session3</div>
+    <div class="titre">Sessions</div>
+    <p-accordion [multiple]="true">
+        <p-accordionTab header="Session 1" [selected]="false">
+            <p>Date de début : {{session.dateDebut}}</p>
+            <p>Lieu : {{session.lieu}}</p>
+            <div class="inscription">
+                <button pButton type="button" label="Inscription" ></button>
+            </div>
+        </p-accordionTab>
+        <p-accordionTab header="Session 2" [selected]="false">
+            <p>Date de début : </p>
+            <p>Lieu : </p>
+        </p-accordionTab>
+        <p-accordionTab header="Session 3" [selected]="false">
+            <p>Date de début : </p>
+            <p>Lieu : </p>
+        </p-accordionTab>
+    </p-accordion>
 </div>
