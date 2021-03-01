@@ -16,7 +16,6 @@ export class FormationComponent implements OnInit {
 
   ngOnInit(): void {
     this.formation = this.formationService.findById(1);
-    console.log(this.formation);
   }
 
 }
