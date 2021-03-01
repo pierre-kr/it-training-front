@@ -9,6 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import {AccordionModule} from 'primeng/accordion';
 import { ToastModule } from 'primeng/toast';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
+
 import {DividerModule} from 'primeng/divider';
 
 
@@ -18,9 +22,13 @@ import { SessionsOfFormationComponent } from './components/formations/sessions-o
 import { ImportantInformationsFormationComponent } from './components/formations/important-informations-formation/important-informations-formation.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    NavBarComponent,
+    FooterComponent,
+    HomeComponent,
     FormationComponent,
     DescriptionFormationComponent,
     SessionsOfFormationComponent,

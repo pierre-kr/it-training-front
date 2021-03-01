@@ -1,0 +1,16 @@
+<nav class="nav collapsible">
+  <a class="nav__brand" href="/">
+    <img src="../../../assets/images/logo.png" height="55px" alt="" />
+  </a>
+  <svg class="icon icon--white nav__toggler" (click)="toggleNavbar()">
+    <use xlink:href="../../../assets/images/sprite.svg#menu"></use>
+  </svg>
+  <ul class="list nav__list" [ngClass]="[navbarOpen]">
+    <li class="nav__item"><a href="#">Accueil</a></li>
+    <li class="nav__item"><a href="#">A propos</a></li>
+    <li class="nav__item"><a href="#">Formation</a></li>
+    <li class="nav__item"><a href="#">Contact</a></li>
+    <li class="nav__item"><a href="#">S'inscrire</a></li>
+    <li class="nav__item"><a href="#">Se conecter</a></li>
+  </ul>
+</nav>
