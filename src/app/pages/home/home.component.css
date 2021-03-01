@@ -1,0 +1,37 @@
+h1 {
+  font-size: 5rem;
+  color: var(--color-headings);
+}
+.container {
+  background-image: url("../../../assets/images/back-ground-home-large.jpg");
+  height: 80vh;
+  background-size: cover;
+  max-width: 100%;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /* opacity: 0.9; */
+}
+
+.form-container {
+  max-width: 800px;
+  text-align: center;
+  width: 100%;
+}
+
+.input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 5.5rem;
+
+  background: rgba(
+    rgb(252, 250, 250),
+    rgb(250, 252, 250),
+    rgb(246, 246, 248),
+    0.8
+  );
+}
