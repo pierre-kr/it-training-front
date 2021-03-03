@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Session } from 'src/app/models/Session';
 import { SessionService } from 'src/app/services/session.service';
 
@@ -9,13 +9,11 @@ import { SessionService } from 'src/app/services/session.service';
 })
 export class SessionsOfFormationComponent implements OnInit {
 
-  session:Session
+  @Input() sessions: Session[];
 
-  constructor(private sessionService:SessionService) { }
+  constructor(private sessionService: SessionService) { }
 
   ngOnInit(): void {
-    this.session = this.sessionService.findById(1);
-    console.log(this.session);
   }
 
 }

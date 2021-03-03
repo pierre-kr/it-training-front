@@ -20,6 +20,7 @@ import { FormationComponent } from './pages/formation/formation.component';
 import { DescriptionFormationComponent } from './components/formations/description-formation/description-formation.component';
 import { SessionsOfFormationComponent } from './components/formations/sessions-of-formation/sessions-of-formation.component';
 import { ImportantInformationsFormationComponent } from './components/formations/important-informations-formation/important-informations-formation.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 
@@ -33,6 +34,7 @@ import { ImportantInformationsFormationComponent } from './components/formations
     DescriptionFormationComponent,
     SessionsOfFormationComponent,
     ImportantInformationsFormationComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
