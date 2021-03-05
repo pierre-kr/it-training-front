@@ -1,0 +1,14 @@
+<div class="sessions">
+    <div class="titre">Sessions</div>
+    <p-accordion [multiple]="true">
+        <span *ngFor="let session of sessions">
+            <p-accordionTab [header]="'Session du ' + (session.dateDebut | date : 'dd/MM/yy') + ' au ' + (session.dateFin | date : 'dd/MM/yy')" [selected]="false">
+                <p>prix : {{session.prix}}</p>
+                <p>Lieu : {{session.lieu.ville}}</p>
+                <div class="inscription">
+                    <button pButton type="button" label="Inscription"></button>
+                </div>
+            </p-accordionTab>
+        </span>
+    </p-accordion>
+</div>

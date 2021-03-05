@@ -1,0 +1,84 @@
+<footer class="block block--dark footer">
+  <div class="container grid footer__sections">
+    <section class="collapsible footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">A propos</h2>
+        <svg
+          class="icon icon--white"
+          [ngClass]="[iconOpenApropos]"
+          (click)="toggleFooterApropos()"
+        >
+          <use xlink:href="../../../assets/images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div [ngClass]="[footerOpenApropos]">
+        <ul class="list">
+          <li><a href="#">Qui sommes-nous</a></li>
+          <li><a href="#">Actualité</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="collapsible footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Nos Formations</h2>
+        <svg
+          class="icon icon--white"
+          [ngClass]="[iconOpenFormation]"
+          (click)="toggleFooterFormation()"
+        >
+          <use xlink:href="../../../assets/images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div [ngClass]="[footerOpenFormation]">
+        <ul class="list">
+          <li><a href="#">Informatique</a></li>
+          <li><a href="#">Bureautique</a></li>
+          <li><a href="#">Digital & Multimédia</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="collapsible footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Aides</h2>
+        <svg
+          class="icon icon--white"
+          [ngClass]="[iconOpenAide]"
+          (click)="toggleFooterAide()"
+        >
+          <use xlink:href="../../../assets/images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div [ngClass]="[footerOpenAide]">
+        <ul class="list">
+          <li><a href="#">Contacter-nous</a></li>
+          <li><a href="#">Recrutement</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="collapsible footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Nos offres</h2>
+        <svg
+          class="icon icon--white"
+          [ngClass]="[iconOpenOffre]"
+          (click)="toggleFooterOffre()"
+        >
+          <use xlink:href="../../../assets/images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div [ngClass]="[footerOpenOffre]">
+        <ul class="list">
+          <li><a href="#">Interentreprise</a></li>
+          <li><a href="#">Intra-entreprise</a></li>
+          <li><a href="#">Sur-mesure</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer__brand">
+      <img src="../../../assets/images/logo.png" alt="" />
+      <p class="footer__copyright">Copyright 2021 IT-Training</p>
+    </section>
+  </div>
+</footer>
