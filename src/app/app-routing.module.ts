@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
 import { FormationComponent } from './pages/formation/formation.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
@@ -7,8 +8,10 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'formation', component: FormationComponent },
+  {path:'formulaire/formation', component:FormationFormulaireComponent},
   { path: '404', component: PageNotFoundComponent },
-  { path: '**', redirectTo: 'home' }];
+  { path: '**', redirectTo: 'home' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -21,6 +21,8 @@ import { DescriptionFormationComponent } from './components/formations/descripti
 import { SessionsOfFormationComponent } from './components/formations/sessions-of-formation/sessions-of-formation.component';
 import { ImportantInformationsFormationComponent } from './components/formations/important-informations-formation/important-informations-formation.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -35,6 +37,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     SessionsOfFormationComponent,
     ImportantInformationsFormationComponent,
     PageNotFoundComponent,
+    FormationFormulaireComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,9 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     AccordionModule,
     ButtonModule,
     ToastModule,
-    DividerModule
+    DividerModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
