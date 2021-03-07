@@ -1,0 +1,29 @@
+.formation {
+    display: flex;
+    justify-content: center;
+    color: black;
+    margin: auto;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+.titre {
+    background-color: #AAAAAA;
+    width: 50%;
+    padding: 10px;
+}
+
+.reference {
+    background-color: #AAAAAA;
+    width: 10%;
+    padding: 10px;
+    margin-left: 0px;
+}
+
+.duree {
+    background-color: #AAAAAA;
+    padding: 10px;
+}

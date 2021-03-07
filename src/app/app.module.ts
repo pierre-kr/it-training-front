@@ -14,12 +14,20 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import {DividerModule} from 'primeng/divider';
+import {OrderListModule} from 'primeng/orderlist';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 
 import { FormationComponent } from './pages/formation/formation.component';
 import { DescriptionFormationComponent } from './components/formations/description-formation/description-formation.component';
 import { SessionsOfFormationComponent } from './components/formations/sessions-of-formation/sessions-of-formation.component';
 import { ImportantInformationsFormationComponent } from './components/formations/important-informations-formation/important-informations-formation.component';
+import { CatalogueComponent } from './components/catalogue/catalogue.component';
+import { ChoixFormationComponent } from './components/choix-formation/choix-formation.component';
+import { ThemeFormationsComponent } from './components/theme-formations/theme-formations.component';
+import { InscriptionSessionComponent } from './formulaires/inscription-session/inscription-session.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EvaluationSessionComponent } from './formulaires/evaluation-session/evaluation-session.component';
 
 
 
@@ -33,6 +41,11 @@ import { ImportantInformationsFormationComponent } from './components/formations
     DescriptionFormationComponent,
     SessionsOfFormationComponent,
     ImportantInformationsFormationComponent,
+    CatalogueComponent,
+    ChoixFormationComponent,
+    ThemeFormationsComponent,
+    InscriptionSessionComponent,
+    EvaluationSessionComponent
   ],
   imports: [
     BrowserModule,
@@ -41,8 +54,12 @@ import { ImportantInformationsFormationComponent } from './components/formations
     BrowserAnimationsModule,
     AccordionModule,
     ButtonModule,
+    RadioButtonModule,
     ToastModule,
-    DividerModule
+    DividerModule,
+    OrderListModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

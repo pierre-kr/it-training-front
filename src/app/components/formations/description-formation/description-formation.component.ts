@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DescriptionFormationComponent implements OnInit {
 
 
-  @Input() concernedPublic: string;
+  @Input() audience: string;
   @Input() prerequis: string;
   @Input() description: string;
   @Input() contenu: string;
