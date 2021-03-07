@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Formation } from 'src/app/models/Formation';
 import { Theme } from 'src/app/models/Theme';
-import { CatalogueService } from 'src/app/services/catalogue.service';
 
 @Component({
   selector: 'app-theme-formations',
@@ -10,14 +9,12 @@ import { CatalogueService } from 'src/app/services/catalogue.service';
 })
 export class ThemeFormationsComponent implements OnInit {
 
-  formations:Formation[] = []
-  @Input() theme:Theme
+  @Input() theme:Theme;
+  formation:Formation;
 
-  constructor(private catalogueService:CatalogueService) { }
-
+  constructor() { }
 
   ngOnInit(): void {
-    this.formations = this.catalogueService.findAll()
   }
 
 }

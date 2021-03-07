@@ -1,4 +1,9 @@
 <div class="themes">
-    <div class="theme"><h4>{{theme.nom}}</h4></div>
-    <app-choix-formation *ngFor="let formation of formations" [formation]="formation"></app-choix-formation>
+    <p-accordion [multiple]="false">
+        <p-accordionTab header={{theme.nom}}>
+            <div class="formation" *ngFor="let formation of theme.formations">
+                <div class="titre"><a [routerLink]="['formation']" [queryParams]="{id: formation.id}">{{formation.titre}}</a></div>
+            </div>
+        </p-accordionTab>
+    </p-accordion>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Theme } from 'src/app/models/Theme';
 import { CatalogueService } from 'src/app/services/catalogue.service';
 
@@ -9,13 +9,13 @@ import { CatalogueService } from 'src/app/services/catalogue.service';
 })
 export class CatalogueComponent implements OnInit {
 
-  themes:Theme[]
+  themes:Theme[] = []
 
   constructor(private catalogueService:CatalogueService) { }
 
 
   ngOnInit(): void {
-    this.themes = this.catalogueService.findAllThemes()
+    this.catalogueService.getAll().subscribe((res) => this.themes = res)
   }
 
 }

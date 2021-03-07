@@ -23,7 +23,6 @@ import { DescriptionFormationComponent } from './components/formations/descripti
 import { SessionsOfFormationComponent } from './components/formations/sessions-of-formation/sessions-of-formation.component';
 import { ImportantInformationsFormationComponent } from './components/formations/important-informations-formation/important-informations-formation.component';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
-import { ChoixFormationComponent } from './components/choix-formation/choix-formation.component';
 import { ThemeFormationsComponent } from './components/theme-formations/theme-formations.component';
 import { InscriptionSessionComponent } from './formulaires/inscription-session/inscription-session.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -42,7 +41,6 @@ import { EvaluationSessionComponent } from './formulaires/evaluation-session/eva
     SessionsOfFormationComponent,
     ImportantInformationsFormationComponent,
     CatalogueComponent,
-    ChoixFormationComponent,
     ThemeFormationsComponent,
     InscriptionSessionComponent,
     EvaluationSessionComponent

@@ -1,3 +1,5 @@
+import { Session } from "./Session"
+
 export class Formation {
     constructor(
         private _id: number,
@@ -8,7 +10,8 @@ export class Formation {
         private _prerequis:string,
         private _reference: string,
         private _titre:string,
-        private _theme:number
+        private _theme:number,
+        private _sessions: Session[]
     ) { }
 
     get id() : number{
@@ -45,5 +48,9 @@ export class Formation {
 
     get theme() : number{
         return this._theme
+    }
+
+    get sessions() : Session[]{
+        return this._sessions
     }
 }

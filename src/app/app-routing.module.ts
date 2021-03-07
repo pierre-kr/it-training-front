@@ -8,7 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'catalogue', component: CatalogueComponent},
-  {path: 'formation?id=:id', component: FormationComponent},
+  {path: 'catalogue/formation', component: FormationComponent},
   {path: 'inscription', component: InscriptionSessionComponent},
   {path: '**', redirectTo: 'home'}];
 

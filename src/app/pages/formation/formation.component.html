@@ -9,8 +9,8 @@
             </app-description-formation>
         </div>
         <div class="important-info">
-            <app-important-informations-formation></app-important-informations-formation>
-            <app-sessions-of-formation></app-sessions-of-formation>
+            <app-important-informations-formation [formation]="formation"></app-important-informations-formation>
+            <app-sessions-of-formation [sessions]="formation.sessions"></app-sessions-of-formation>
         </div>
     </div>
 </div>
