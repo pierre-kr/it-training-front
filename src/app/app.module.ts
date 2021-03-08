@@ -16,12 +16,20 @@ import { HomeComponent } from './pages/home/home.component';
 import {DividerModule} from 'primeng/divider';
 import {DropdownModule} from 'primeng/dropdown';
 
+import {OrderListModule} from 'primeng/orderlist';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 
 import { FormationComponent } from './pages/formation/formation.component';
 import { DescriptionFormationComponent } from './components/formations/description-formation/description-formation.component';
 import { SessionsOfFormationComponent } from './components/formations/sessions-of-formation/sessions-of-formation.component';
 import { ImportantInformationsFormationComponent } from './components/formations/important-informations-formation/important-informations-formation.component';
+
+import { CatalogueComponent } from './components/catalogue/catalogue.component';
+import { ThemeFormationsComponent } from './components/theme-formations/theme-formations.component';
+import { InscriptionSessionComponent } from './formulaires/inscription-session/inscription-session.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EvaluationSessionComponent } from './formulaires/evaluation-session/evaluation-session.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -38,8 +46,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DescriptionFormationComponent,
     SessionsOfFormationComponent,
     ImportantInformationsFormationComponent,
-    PageNotFoundComponent,
     FormationFormulaireComponent,
+    CatalogueComponent,
+    ThemeFormationsComponent,
+    InscriptionSessionComponent,
+    EvaluationSessionComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -48,10 +60,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     AccordionModule,
     ButtonModule,
+    RadioButtonModule,
     ToastModule,
     DividerModule,
-    FormsModule,
     DropdownModule,
+    OrderListModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],

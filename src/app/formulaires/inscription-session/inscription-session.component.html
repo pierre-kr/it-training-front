@@ -1,0 +1,38 @@
+<h2>Inscription</h2>
+<div class="inscription">
+    Vous êtes sur le point de vous inscrire à une session pour la formation suivante :
+    <form [formGroup]="apprenant" (ngSubmit)="onSubmit()">
+        Merci de remplir les champs ci-dessous :
+        <div class="civilite">
+            Civilité* : 
+            <div class="feminin">
+                <p-radioButton name="civilite" value="F" label="F" formControlName="civilite">
+                </p-radioButton>
+            </div>
+            <div class="masculin">
+                <p-radioButton name="civilite" value="M" label="M" formControlName="civilite">
+                </p-radioButton>
+            </div>
+        </div>
+        <label>
+            Nom* : <input type="text" formControlName="nom" required>
+        </label>
+        <label>
+            Prénom* : <input type="text" formControlName="prenom" required>
+        </label>
+        <label>
+            Email* : <input type="email" formControlName="email" required>
+        </label>
+        <label>
+            Société : <input type="text" formControlName="societe">
+        </label>
+        <label>
+            Fonction : <input type="text" formControlName="fonction">
+        </label>
+        <label>
+            Téléphone : <input type="tel" formControlName="telephone">
+        </label>
+        <button type="submit">S'inscrire à la session</button>
+    </form>
+    *: champ obligatoire
+</div>

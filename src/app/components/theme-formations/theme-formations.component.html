@@ -1,0 +1,9 @@
+<div class="themes">
+    <p-accordion [multiple]="false">
+        <p-accordionTab header={{theme.nom}}>
+            <div class="formation" *ngFor="let formation of theme.formations">
+                <div class="titre"><a [routerLink]="['formation']" [queryParams]="{id: formation.id}">{{formation.titre}}</a></div>
+            </div>
+        </p-accordionTab>
+    </p-accordion>
+</div>
