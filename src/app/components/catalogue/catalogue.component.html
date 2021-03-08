@@ -1,4 +1,6 @@
 <h2>Liste des formations</h2>
 <div class="catalogue">
-    <app-theme-formations *ngFor="let theme of themes" [theme]="theme"></app-theme-formations>
+    <div *ngFor="let theme of themes">
+        <app-theme-formations [theme]="theme" *ngIf="theme.formations.length != 0"></app-theme-formations>
+    </div>
 </div>
