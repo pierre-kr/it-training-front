@@ -13,6 +13,4 @@ export class FormationService {
   findById(id: number): Observable<Formation> {
     return this.httpClient.get<Formation>(`http://localhost:8080/formations/${id}`);
   }
-
-
 }

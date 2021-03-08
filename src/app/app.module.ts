@@ -14,12 +14,20 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import {DividerModule} from 'primeng/divider';
+import {OrderListModule} from 'primeng/orderlist';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 
 import { FormationComponent } from './pages/formation/formation.component';
 import { DescriptionFormationComponent } from './components/formations/description-formation/description-formation.component';
 import { SessionsOfFormationComponent } from './components/formations/sessions-of-formation/sessions-of-formation.component';
 import { ImportantInformationsFormationComponent } from './components/formations/important-informations-formation/important-informations-formation.component';
+
+import { CatalogueComponent } from './components/catalogue/catalogue.component';
+import { ThemeFormationsComponent } from './components/theme-formations/theme-formations.component';
+import { InscriptionSessionComponent } from './formulaires/inscription-session/inscription-session.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EvaluationSessionComponent } from './formulaires/evaluation-session/evaluation-session.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
@@ -34,7 +42,11 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     DescriptionFormationComponent,
     SessionsOfFormationComponent,
     ImportantInformationsFormationComponent,
-    PageNotFoundComponent,
+    CatalogueComponent,
+    ThemeFormationsComponent,
+    InscriptionSessionComponent,
+    EvaluationSessionComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -43,8 +55,12 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     BrowserAnimationsModule,
     AccordionModule,
     ButtonModule,
+    RadioButtonModule,
     ToastModule,
-    DividerModule
+    DividerModule,
+    OrderListModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
