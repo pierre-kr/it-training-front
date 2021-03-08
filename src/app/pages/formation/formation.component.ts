@@ -14,10 +14,9 @@ export class FormationComponent implements OnInit {
   id: number;
   formation: Formation;
 
-  constructor(private formationService: FormationService, private route: ActivatedRoute, private router:Router) { }
+  constructor(private formationService: FormationService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    
     this.route.queryParams.subscribe(params => {
       this.id = params.id;
     });
@@ -25,7 +24,7 @@ export class FormationComponent implements OnInit {
       this.formation = formation;
     }, (error) => {
       this.router.navigate(['/404']);
-    })
+    });
   }
 
 }

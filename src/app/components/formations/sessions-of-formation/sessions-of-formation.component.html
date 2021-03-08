@@ -3,8 +3,8 @@
     <p-accordion [multiple]="true">
         <span *ngFor="let session of sessions">
             <p-accordionTab [header]="'Session du ' + (session.dateDebut | date : 'dd/MM/yy') + ' au ' + (session.dateFin | date : 'dd/MM/yy')" [selected]="false">
-                <p>Prix : {{session.prix}}</p>
-                <p>Lieu : {{session.lieu}}</p>
+                <p>prix : {{session.prix}}</p>
+                <p>Lieu : {{session.lieu.ville}}</p>
                 <div class="inscription">
                     <a routerLink="/inscription"><button pButton type="button" label="Inscription"></button></a>
                 </div>

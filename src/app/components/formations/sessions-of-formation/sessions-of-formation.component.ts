@@ -11,7 +11,7 @@ export class SessionsOfFormationComponent implements OnInit {
 
   @Input() sessions: Session[];
 
-  constructor(private sessionService:SessionService) { }
+  constructor(private sessionService: SessionService) { }
 
   ngOnInit(): void {
   }

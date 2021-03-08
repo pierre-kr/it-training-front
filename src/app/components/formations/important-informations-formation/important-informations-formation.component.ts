@@ -11,10 +11,9 @@ import { FormationService } from 'src/app/services/formation.service';
 })
 export class ImportantInformationsFormationComponent implements OnInit {
 
-  @Input() formation:Formation
-  @Input() sessions:Session[]
+  @Input() formation: Formation;
 
-  constructor(private sessionService:SessionService, private formationService: FormationService) { }
+  constructor(private sessionService: SessionService, private formationService: FormationService) { }
 
   ngOnInit(): void {
   }
