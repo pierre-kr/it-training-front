@@ -14,6 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import {DividerModule} from 'primeng/divider';
+import {DropdownModule} from 'primeng/dropdown';
+
 
 
 import { FormationComponent } from './pages/formation/formation.component';
@@ -49,6 +51,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ToastModule,
     DividerModule,
     FormsModule,
+    DropdownModule,
     ReactiveFormsModule
   ],
   providers: [],

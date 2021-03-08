@@ -1,7 +1,6 @@
-
 <form [formGroup]="formationForm" (ngSubmit)="onSubmit()" class="form">
     <h1>FORMULAIRE</h1>
-      <div>
+    <div>
         <label>
             audience : <input type="text" formControlName="audience">
         </label>
@@ -37,5 +36,25 @@
         </label>
     </div>
 
+    <div>
+        <label>Sous themes :
+            <p-dropdown [options]="sousThemes" [(ngModel)]="selectedSousTheme" optionLabel="nom" formControlName="theme"></p-dropdown>
+        </label>
+    </div>
+
     <button type="submit">enregistrement</button>
+
+
 </form>
+
+
+<!-- <div>
+    <label>Domaines :
+        <p-dropdown [options]="domaines" [(ngModel)]="selectedDomaine" optionLabel="nom"></p-dropdown>
+    </label>
+</div>
+<div>
+    <label>Themes :
+        <p-dropdown [options]="themes" [(ngModel)]="selectedTheme" optionLabel="nom"></p-dropdown>
+    </label>
+</div> -->
