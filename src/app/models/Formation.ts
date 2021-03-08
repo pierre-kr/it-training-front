@@ -1,4 +1,5 @@
-import { Session } from "./Session"
+import { Session } from "./Session";
+import { Theme } from './Theme';
 
 export class Formation {
     constructor(
@@ -10,7 +11,7 @@ export class Formation {
         private _prerequis:string,
         private _reference: string,
         private _titre:string,
-        private _theme:number,
+        private _theme:Theme,
         private _sessions: Session[]
     ) { }
 
@@ -46,7 +47,7 @@ export class Formation {
         return this._titre
     }
 
-    get theme() : number{
+    get theme() : Theme{
         return this._theme
     }
 
