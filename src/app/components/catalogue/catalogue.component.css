@@ -1,0 +1,10 @@
+h2 {
+    text-align: center;
+}
+
+.catalogue {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 5%;
+}

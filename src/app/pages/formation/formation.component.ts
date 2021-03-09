@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Formation } from 'src/app/models/Formation';
 import { FormationService } from 'src/app/services/formation.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -17,7 +17,6 @@ export class FormationComponent implements OnInit {
   constructor(private formationService: FormationService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-
     this.route.queryParams.subscribe(params => {
       this.id = params.id;
     });

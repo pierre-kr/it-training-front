@@ -1,16 +1,57 @@
-import { Session } from './Session';
+import { Session } from "./Session";
+import { Theme } from './Theme';
 
 export class Formation {
     constructor(
-        public id: number,
-        public audience: string,
-        public contenu: string,
-        public description: string,
-        public lienTest: string,
-        public prerequis: string,
-        public reference: string,
-        public titre: string,
-        public theme: number,
-        public sessions: Session[]
+        private _id: number,
+        private _audience:string,
+        private _contenu:string,
+        private _description:string,
+        private _lienTest:string,
+        private _prerequis:string,
+        private _reference: string,
+        private _titre:string,
+        private _theme:Theme,
+        private _sessions: Session[]
     ) { }
+
+    get id() : number{
+        return this._id
+    }
+
+    get audience() : string{
+        return this._audience
+    }
+
+    get contenu() : string{
+        return this._contenu
+    }
+
+    get description() : string{
+        return this._description
+    }
+
+    get lienTest() : string{
+        return this._lienTest
+    }
+
+    get prerequis() : string{
+        return this._prerequis
+    }
+
+    get reference() : string{
+        return this._reference
+    }
+
+    get titre() : string{
+        return this._titre
+    }
+
+    get theme() : Theme{
+        return this._theme
+    }
+
+    get sessions() : Session[]{
+        return this._sessions
+    }
 }
