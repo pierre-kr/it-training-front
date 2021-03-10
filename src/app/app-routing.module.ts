@@ -9,13 +9,13 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 
 const routes: Routes = [
 
-  {path: 'home', component: HomeComponent},
-  {path: 'catalogue', component: CatalogueComponent},
-  {path: 'catalogue/formation', component: FormationComponent},
-  {path: 'inscription', component: InscriptionSessionComponent},
-  {path:'formulaire/formation', component:FormationFormulaireComponent},
-  {path: '404', component: PageNotFoundComponent },
-  {path: '**', redirectTo: 'home'}];
+  { path: 'home', component: HomeComponent },
+  { path: 'catalogue', component: CatalogueComponent },
+  { path: 'catalogue/formation', component: FormationComponent },
+  { path: 'inscription', component: InscriptionSessionComponent },
+  { path: 'formulaire/formation', component: FormationFormulaireComponent },
+  { path: '404', component: PageNotFoundComponent },
+  { path: '**', redirectTo: 'home' }];
 
 
 @NgModule({

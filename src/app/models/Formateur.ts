@@ -1,15 +1,16 @@
-export class Apprenant {
+import { Session } from './Session';
+
+export class Formateur {
     constructor(
         private _id: number,
-        private _civilite: string,
-        private _email: string,
-        private _fonction: string,
         private _nom: string,
         private _prenom: string,
-        private _societe: string,
-        private _telephone: string,
-        private _lieuId: number
-    ) { }
+        private _civilite: string,
+        private _fonction: string,
+        private _entreprise: string,
+        private _email: string,
+        private _tel: string,
+        private _sessions: Session[]) { }
 
     get id(): number {
         return this._id;
@@ -35,15 +36,15 @@ export class Apprenant {
         return this._prenom;
     }
 
-    get societe(): string {
-        return this._societe;
+    get entreprise(): string {
+        return this._entreprise;
     }
 
-    get telephone(): string {
-        return this._telephone;
+    get tel(): string {
+        return this._tel;
     }
 
-    get lieuId(): number {
-        return this._lieuId;
+    get sessions(): Session[] {
+        return this._sessions;
     }
 }
