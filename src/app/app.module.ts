@@ -32,6 +32,7 @@ import { EvaluationSessionComponent } from './formulaires/evaluation-session/eva
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -50,7 +51,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ThemeFormationsComponent,
     InscriptionSessionComponent,
     EvaluationSessionComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

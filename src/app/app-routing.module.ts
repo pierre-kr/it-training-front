@@ -6,10 +6,12 @@ import { InscriptionSessionComponent } from './formulaires/inscription-session/i
 import { FormationComponent } from './pages/formation/formation.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
 
   {path: 'home', component: HomeComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'catalogue', component: CatalogueComponent},
   {path: 'catalogue/formation', component: FormationComponent},
   {path: 'inscription', component: InscriptionSessionComponent},
