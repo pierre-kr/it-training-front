@@ -53,6 +53,7 @@ import { FormateurService } from './services/formateur.service';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 import { ProgressBarModule } from 'primeng/progressbar';
+import { FormateurComponent } from './components/dashboard/formateur/formateur.component';
 
 
 
@@ -77,7 +78,8 @@ import { ProgressBarModule } from 'primeng/progressbar';
     SessionFormulaireComponent,
     ThemeFormulaireComponent,
     ResponsableFormulaireComponent,
-    ResposableComponent
+    ResposableComponent,
+    FormateurComponent
   ],
   imports: [
     BrowserModule,
