@@ -2,17 +2,17 @@ import { Session } from './Session';
 
 export class Formateur {
     constructor(
-        private _id: number,
-        private _nom: string,
-        private _prenom: string,
-        private _civilite: string,
-        private _fonction: string,
-        private _entreprise: string,
-        private _email: string,
-        private _tel: string,
-        private _sessions: Session[]) { }
+        private _id?: any,
+        private _nom?: string,
+        private _prenom?: string,
+        private _civilite?: string,
+        private _fonction?: string,
+        private _entreprise?: string,
+        private _email?: string,
+        private _tel?: string,
+        private _sessions?: Session[]) { }
 
-    get id(): number {
+    get id(): string {
         return this._id;
     }
 

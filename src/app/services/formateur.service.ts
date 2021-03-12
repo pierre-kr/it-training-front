@@ -20,4 +20,10 @@ export class FormateurService {
     console.log(formateur);
     return this.httpClient.post<Formateur>(`http://localhost:8080/formateurs`, formateur);
   }
+  getCarsSmall() :any {
+    return this.findAll()
+                .toPromise()
+                .then(res => <Formateur[]> res)
+                .then(data => { return data; });
+}
 }

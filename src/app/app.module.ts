@@ -7,18 +7,29 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ButtonModule } from 'primeng/button';
-import {AccordionModule} from 'primeng/accordion';
+import { AccordionModule } from 'primeng/accordion';
 import { ToastModule } from 'primeng/toast';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 
-import {DividerModule} from 'primeng/divider';
-import {DropdownModule} from 'primeng/dropdown';
+import { DividerModule } from 'primeng/divider';
+import { DropdownModule } from 'primeng/dropdown';
 
-import {OrderListModule} from 'primeng/orderlist';
-import {RadioButtonModule} from 'primeng/radiobutton';
-import {CascadeSelectModule} from 'primeng/cascadeselect';
+
+import { TableModule } from 'primeng/table';
+import { SelectItem } from 'primeng/api';
+import { MessageService } from 'primeng/api';
+import { SliderModule } from 'primeng/slider';
+import { DialogModule } from 'primeng/dialog';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { ContextMenuModule } from 'primeng/contextmenu';
+
+
+
+import { OrderListModule } from 'primeng/orderlist';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
 
 
 import { FormationComponent } from './pages/formation/formation.component';
@@ -37,6 +48,12 @@ import { FormateurFormulaireComponent } from './components/dashboard/formateur-f
 import { SessionFormulaireComponent } from './components/dashboard/session-formulaire/session-formulaire.component';
 import { ThemeFormulaireComponent } from './components/dashboard/theme-formulaire/theme-formulaire.component';
 import { ResponsableFormulaireComponent } from './components/dashboard/responsable-formulaire/responsable-formulaire.component';
+import { ResposableComponent } from './components/dashboard/resposable/resposable.component';
+import { FormateurService } from './services/formateur.service';
+import { CalendarModule } from 'primeng/calendar';
+import { InputTextModule } from 'primeng/inputtext';
+import { ProgressBarModule } from 'primeng/progressbar';
+
 
 
 
@@ -59,7 +76,8 @@ import { ResponsableFormulaireComponent } from './components/dashboard/responsab
     FormateurFormulaireComponent,
     SessionFormulaireComponent,
     ThemeFormulaireComponent,
-    ResponsableFormulaireComponent
+    ResponsableFormulaireComponent,
+    ResposableComponent
   ],
   imports: [
     BrowserModule,
@@ -74,10 +92,18 @@ import { ResponsableFormulaireComponent } from './components/dashboard/responsab
     DropdownModule,
     OrderListModule,
     CascadeSelectModule,
+    TableModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CalendarModule,
+    SliderModule,
+    DialogModule,
+    MultiSelectModule,
+    ContextMenuModule,
+    InputTextModule,
+    ProgressBarModule
   ],
-  providers: [],
+  providers: [FormateurService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
