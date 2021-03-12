@@ -8,13 +8,16 @@ import { Formation } from '../models/Formation';
 })
 export class FormationService {
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
   findById(id: number): Observable<Formation> {
     return this.httpClient.get<Formation>(`http://localhost:8080/formations/${id}`);
   }
+  findAll(): Observable<Formation[]> {
+    return this.httpClient.get<Formation[]>(`http://localhost:8080/formations`);
+  }
   create(formation: Formation): Observable<Formation> {
-    console.log(formation);
     return this.httpClient.post<Formation>(`http://localhost:8080/formations`, formation);
   }
+
 }

@@ -1,17 +1,21 @@
+import { Formateur } from "./Formateur";
+import { Formation } from "./Formation";
+import { Lieu } from "./Lieu";
+
 export class Session {
     constructor(
         private _id: number,
         private _dateDebut: string,
         private _dateFin: string,
-        private _duree : number,
-        private _validationSession : boolean,
-        private _prix : number,
+        private _duree: number,
+        private _validationSession: boolean,
+        private _prix: number,
         private _reference: string,
-        private _salle : string,
-        private _type : string,
-        private _formateurId: number,
-        private _formationId: number,
-        private _lieu: string,
+        private _salle: string,
+        private _type: string,
+        private _formateur: Formateur,
+        private _formation: Formation,
+        private _lieu: Lieu,
     ) { }
     get id() {
         return this._id;
@@ -40,11 +44,11 @@ export class Session {
     get type() {
         return this._type;
     }
-    get formateurId() {
-        return this._formateurId;
+    get formateur() {
+        return this._formateur;
     }
-    get formationId() {
-        return this._formationId;
+    get formation() {
+        return this._formation;
     }
     get lieu() {
         return this._lieu;

@@ -18,6 +18,7 @@ import {DropdownModule} from 'primeng/dropdown';
 
 import {OrderListModule} from 'primeng/orderlist';
 import {RadioButtonModule} from 'primeng/radiobutton';
+import {CascadeSelectModule} from 'primeng/cascadeselect';
 
 
 import { FormationComponent } from './pages/formation/formation.component';
@@ -72,6 +73,7 @@ import { ResponsableFormulaireComponent } from './components/dashboard/responsab
     DividerModule,
     DropdownModule,
     OrderListModule,
+    CascadeSelectModule,
     FormsModule,
     ReactiveFormsModule
   ],

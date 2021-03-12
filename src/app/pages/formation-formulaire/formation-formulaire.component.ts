@@ -27,24 +27,7 @@ export class FormationFormulaireComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private formationService: FormationService, private themeService: ThemeService) {
     this.themeService.findAll().subscribe((themes) => {
-      this.allThemes = themes;
-      this.allThemes.forEach(themeCourant => {
-        if (themeCourant.idParent == null) {
-          this.domaines.push(themeCourant);
-        }
-      });
-      this.allThemes.forEach(themeCourant => {
-        if (this.domaines.find((domaine) => domaine.id === themeCourant.idParent)) {
-          this.themes.push(themeCourant);
-        }
-      });
-      this.allThemes.forEach(themeCourant => {
-        if (this.themes.find((theme) => theme.id === themeCourant.idParent)) {
-          this.sousThemes.push(themeCourant);
-        }
-      });
-      console.log(this.allThemes);
-      console.log(this.sousThemes);
+      this.sousThemes = themes.filter((theme) => theme.formations.length > 0);
     });
     this.formationForm = formBuilder.group({
       audience: [''],
