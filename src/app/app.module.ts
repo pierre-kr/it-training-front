@@ -14,6 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import {DividerModule} from 'primeng/divider';
+import {DropdownModule} from 'primeng/dropdown';
+
 import {OrderListModule} from 'primeng/orderlist';
 import {RadioButtonModule} from 'primeng/radiobutton';
 
@@ -26,9 +28,14 @@ import { ImportantInformationsFormationComponent } from './components/formations
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import { ThemeFormationsComponent } from './components/theme-formations/theme-formations.component';
 import { InscriptionSessionComponent } from './formulaires/inscription-session/inscription-session.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EvaluationSessionComponent } from './formulaires/evaluation-session/evaluation-session.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { AuthService } from './services/auth.service';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 
@@ -42,11 +49,14 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     DescriptionFormationComponent,
     SessionsOfFormationComponent,
     ImportantInformationsFormationComponent,
+    FormationFormulaireComponent,
     CatalogueComponent,
     ThemeFormationsComponent,
     InscriptionSessionComponent,
     EvaluationSessionComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -58,11 +68,12 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     RadioButtonModule,
     ToastModule,
     DividerModule,
+    DropdownModule,
     OrderListModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

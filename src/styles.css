@@ -1,4 +1,3 @@
-
 :root {
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
@@ -187,7 +186,7 @@ a {
 }
 
 .icon-container {
-  background: #f3f9fa;
+  background: transparent;
   width: 64px;
   height: 64px;
   border-radius: 100%;
@@ -295,7 +294,7 @@ a {
 }
 
 .input-group .btn {
-  margin: 4px;
+  margin: 1px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -305,14 +304,17 @@ a {
 }
 /* Cards */
 .card {
+  border: 1px rgba(0, 0, 0, 0.5) solid;
   border-radius: 7px;
-  box-shadow: 0 0 20px 10px #f3f3f3;
+  box-shadow: 0 7 10px 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  height: 30rem;
 }
 
 .card__header,
 .card__body {
-  padding: 2rem 3rem;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
 .card--primary .card__header {
@@ -321,7 +323,7 @@ a {
 }
 
 .card--secondary .card__header {
-  background: var(--color-secondary);
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 
@@ -616,5 +618,3 @@ a {
   max-width: 1140px;
   margin: 0 auto;
 }
-
-

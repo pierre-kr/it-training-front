@@ -1,17 +1,22 @@
 h1 {
   font-size: 5rem;
-  color: var(--color-headings);
+  color: #675f6e;
 }
+
+img {
+  width: 100%;
+  height: 185.469px;
+  object-fit: cover;
+}
+
 .container {
-  background-image: url("../../../assets/images/back-ground-home-large.jpg");
+  background-image: url("../../../assets/images/i.jpg");
   height: 80vh;
   background-size: cover;
   max-width: 100%;
-
   align-items: center;
   display: flex;
   justify-content: center;
-  /* opacity: 0.9; */
 }
 
 .form-container {
@@ -21,17 +26,48 @@ h1 {
 }
 
 .input {
-  border-radius: var(--border-radius);
-  border: 1px solid var(--color-border);
+  border: 0;
   color: var(--color-headings);
   font-size: 2rem;
+  font-weight: bold;
   outline: 0;
   padding: 1.5rem 5.5rem;
+  background: transparent;
+}
 
-  background: rgba(
-    rgb(252, 250, 250),
-    rgb(250, 252, 250),
-    rgb(246, 246, 248),
-    0.8
-  );
+.input::placeholder {
+  color: #d2d0db;
+  opacity: 0.5;
+}
+
+.container__card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 30rem;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.card:hover {
+  opacity: 0.7;
+}
+
+.card__body {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .input {
+    color: rgb(250, 226, 226);
+  }
+  h1 {
+    font-size: 5rem;
+    color: #d2d0db;
+  }
+  .container__card {
+    display: flex;
+    justify-content: space-around;
+  }
 }

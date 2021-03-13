@@ -11,6 +11,14 @@
     <li class="nav__item"><a [routerLink]="['/catalogue']">Formations</a></li>
     <li class="nav__item"><a href="#">Contact</a></li>
     <li class="nav__item"><a href="#">S'inscrire</a></li>
-    <li class="nav__item"><a href="#">Se connecter</a></li>
+    <li class="nav__item" *ngIf="auth.isLoggedIn()">
+      <a [routerLink]="['/dashboard']">Dashboard</a>
+    </li>
+    <li class="nav__item" *ngIf="!auth.isLoggedIn()">
+      <a [routerLink]="['/login']">Log In</a>
+    </li>
+    <li class="nav__item" *ngIf="auth.isLoggedIn()">
+      <a [routerLink]="['/home']" (click)="auth.logout()">Log out</a>
+    </li>
   </ul>
 </nav>
