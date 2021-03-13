@@ -7,24 +7,35 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ButtonModule } from 'primeng/button';
-import {AccordionModule} from 'primeng/accordion';
+import { AccordionModule } from 'primeng/accordion';
 import { ToastModule } from 'primeng/toast';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 
-import {DividerModule} from 'primeng/divider';
-import {DropdownModule} from 'primeng/dropdown';
+import { DividerModule } from 'primeng/divider';
+import { DropdownModule } from 'primeng/dropdown';
 
-import {OrderListModule} from 'primeng/orderlist';
-import {RadioButtonModule} from 'primeng/radiobutton';
+
+import { TableModule } from 'primeng/table';
+import { SelectItem } from 'primeng/api';
+import { MessageService } from 'primeng/api';
+import { SliderModule } from 'primeng/slider';
+import { DialogModule } from 'primeng/dialog';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { ContextMenuModule } from 'primeng/contextmenu';
+
+
+
+import { OrderListModule } from 'primeng/orderlist';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
 
 
 import { FormationComponent } from './pages/formation/formation.component';
 import { DescriptionFormationComponent } from './components/formations/description-formation/description-formation.component';
 import { SessionsOfFormationComponent } from './components/formations/sessions-of-formation/sessions-of-formation.component';
 import { ImportantInformationsFormationComponent } from './components/formations/important-informations-formation/important-informations-formation.component';
-
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import { ThemeFormationsComponent } from './components/theme-formations/theme-formations.component';
 import { InscriptionSessionComponent } from './formulaires/inscription-session/inscription-session.component';
@@ -32,6 +43,16 @@ import { EvaluationSessionComponent } from './formulaires/evaluation-session/eva
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormateurFormulaireComponent } from './components/dashboard/formateur-formulaire/formateur-formulaire.component';
+import { SessionFormulaireComponent } from './components/dashboard/session-formulaire/session-formulaire.component';
+import { ThemeFormulaireComponent } from './components/dashboard/theme-formulaire/theme-formulaire.component';
+import { ResponsableFormulaireComponent } from './components/dashboard/responsable-formulaire/responsable-formulaire.component';
+import { ResposableComponent } from './components/dashboard/resposable/resposable.component';
+import { FormateurService } from './services/formateur.service';
+import { CalendarModule } from 'primeng/calendar';
+import { InputTextModule } from 'primeng/inputtext';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { FormateurComponent } from './components/dashboard/formateur/formateur.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './services/auth.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -55,6 +76,12 @@ import { AuthGuardService } from './services/auth-guard.service';
     InscriptionSessionComponent,
     EvaluationSessionComponent,
     PageNotFoundComponent,
+    FormateurFormulaireComponent,
+    SessionFormulaireComponent,
+    ThemeFormulaireComponent,
+    ResponsableFormulaireComponent,
+    ResposableComponent,
+    FormateurComponent
     LoginComponent,
     DashboardComponent
   ],
@@ -70,9 +97,19 @@ import { AuthGuardService } from './services/auth-guard.service';
     DividerModule,
     DropdownModule,
     OrderListModule,
+    CascadeSelectModule,
+    TableModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CalendarModule,
+    SliderModule,
+    DialogModule,
+    MultiSelectModule,
+    ContextMenuModule,
+    InputTextModule,
+    ProgressBarModule
   ],
+  providers: [FormateurService],
   providers: [AuthService,AuthGuardService],
   bootstrap: [AppComponent]
 })

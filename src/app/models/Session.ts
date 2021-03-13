@@ -1,4 +1,6 @@
 import { Lieu } from './Lieu';
+import { Formateur } from './Formateur';
+import { Formation } from './Formation';
 
 export class Session {
     constructor(
@@ -10,9 +12,9 @@ export class Session {
         private _prix: number,
         private _reference: string,
         private _salle: string,
-        private _typeSession: string,
-        // private _formateurId: number,
-        // private _formationId: number,
+        private _type: string,
+        private _formateur: Formateur,
+        private _formation: Formation,
         private _lieu: Lieu,
     ) { }
     get id(): number {
@@ -42,12 +44,12 @@ export class Session {
     get typeSession(): string {
         return this._typeSession;
     }
-    /*get formateurId() {
-        return this._formateurId;
+    get formateur() {
+        return this._formateur;
     }
-    get formationId() {
-        return this._formationId;
-    }*/
+    get formation() {
+        return this._formation;
+    }
     get lieu(): Lieu {
         return this._lieu;
     }

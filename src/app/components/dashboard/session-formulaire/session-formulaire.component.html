@@ -1,0 +1,59 @@
+<form [formGroup]="sessionForm" (ngSubmit)="onSubmit()" class="form">
+    <h1>Session</h1>
+    <div>
+        <label>formation : </label>
+        <p-cascadeSelect [(ngModel)]="selectedFormation" [options]="themes" optionLabel="titre" optionGroupLabel="nom"
+            [optionGroupChildren]="['formations']" [style]="{'minWidth': '14rem'}" formControlName="formation">
+        </p-cascadeSelect>
+
+    </div>
+    <div>
+        <label>
+            date Debut : <input type="text" formControlName="dateDeb">
+        </label>
+    </div>
+    <div>
+        <label>
+            date Fin : <input type="text" formControlName="dateFin">
+        </label>
+    </div>
+    <div>
+        <label>
+            duree : <input type="text" formControlName="duree">
+        </label>
+    </div>
+    <div>
+        <label>
+            prix : <input type="text" formControlName="prix">
+        </label>
+    </div>
+    <div>
+        <label>
+            salle : <input type="text" formControlName="salle">
+        </label>
+    </div>
+    <div>
+        <label>
+            type : <input type="text" formControlName="type">
+        </label>
+    </div>
+    <div>
+        <label  formGroupName="lieu">
+            ville : <input type="text" formGroupName="ville">
+        </label>
+    </div>
+
+
+    <div>
+        <label>formateur : </label>
+            <p-dropdown [options]="formateurs" [(ngModel)]="selectedFormateur" optionLabel="nom" formControlName="formateur"></p-dropdown>
+        
+    </div>
+   
+
+
+
+    <button type="submit">enregistrement</button>
+
+
+</form>
