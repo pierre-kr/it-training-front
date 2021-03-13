@@ -6,8 +6,8 @@ import { ResponsableService } from 'src/app/services/responsable.service';
 @Component({
   selector: 'app-resposable',
   providers: [MessageService],
-  templateUrl: './resposable.component.html',
-  styleUrls: ['./resposable.component.css'],
+  templateUrl: './responsable.component.html',
+  styleUrls: ['./responsable.component.css'],
   styles: [`
         :host ::ng-deep .p-cell-editing {
             padding-top: 0 !important;
@@ -15,7 +15,7 @@ import { ResponsableService } from 'src/app/services/responsable.service';
         }
     `]
 })
-export class ResposableComponent implements OnInit {
+export class ResponsableComponent implements OnInit {
 
 
   statuses: SelectItem[];
@@ -34,26 +34,9 @@ export class ResposableComponent implements OnInit {
       { field: 'id', header: 'id' },
       { field: 'nom', header: 'nom' },
       { field: 'prenom', header: 'prenom' },
-      { field: 'civilite', header: 'civilite' },
       { field: 'email', header: 'email' },
-      { field: 'entreprise', header: 'entreprise' },
       { field: 'tel', header: 'tel' },
       { field: 'fonction', header: 'fonction' }
     ];
   }
-
-  // onRowEditInit(Responsable: Responsable) {
-  //   console.log(Responsable);
-  //   this.clonedResponsables[Responsable.id] = { ...Responsable };
-  // }
-  // onRowEditSave(Responsable: Responsable) {
-  //   delete this.clonedResponsables[Responsable.id];
-  //   this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Product is updated' });
-
-  // }
-
-  // onRowEditCancel(Responsable: Responsable, index: number) {
-  //   this.Responsables[index] = this.clonedResponsables[Responsable.id];
-  //   delete this.clonedResponsables[Responsable.id];
-  // }
 }
