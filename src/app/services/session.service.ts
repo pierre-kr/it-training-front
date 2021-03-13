@@ -8,11 +8,19 @@ import { Session } from '../models/Session';
 })
 export class SessionService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
+  
+  findById(id: number): Observable<Session> {
+    return this.httpClient.get<Session>(`http://localhost:8080/sessions/${id}`);
+  }
 
+  findAll(): Observable<Session[]> {
+    return this.httpClient.get<Session[]>(`http://localhost:8080/sessions`);
+  }
 
   create(session: Session): Observable<Session> {
     console.log(session);
     return this.httpClient.post<Session>(`http://localhost:8080/sessions`, session);
   }
+    
 }

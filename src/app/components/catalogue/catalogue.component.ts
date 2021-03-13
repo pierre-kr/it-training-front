@@ -9,13 +9,14 @@ import { CatalogueService } from 'src/app/services/catalogue.service';
 })
 export class CatalogueComponent implements OnInit {
 
-  themes:Theme[] = []
+  themes: Theme[] = [];
 
-  constructor(private catalogueService:CatalogueService) { }
-
+  constructor(private catalogueService: CatalogueService) { }
 
   ngOnInit(): void {
-    this.catalogueService.getAll().subscribe((res) => this.themes = res)
+    this.catalogueService.getAll().subscribe((res) => {
+      this.themes = res;
+    });
   }
 
 }

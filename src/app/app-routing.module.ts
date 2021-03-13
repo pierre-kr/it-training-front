@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
+import { EvaluationSessionComponent } from './formulaires/evaluation-session/evaluation-session.component';
 import { InscriptionSessionComponent } from './formulaires/inscription-session/inscription-session.component';
 import { FormationComponent } from './pages/formation/formation.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -11,14 +12,17 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
+
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'catalogue', component: CatalogueComponent },
   { path: 'catalogue/formation', component: FormationComponent },
   { path: 'inscription/session', component: InscriptionSessionComponent },
   { path: 'formulaire/formation', component:FormationFormulaireComponent },
   { path: 'dashboard', component:DashboardComponent,canActivate:[AuthGuardService] },
   { path: '404', component: PageNotFoundComponent },
-  { path: '**', redirectTo: 'home'} ];
+  { path: 'evaluation', component: EvaluationSessionComponent },
+  { path: '**', redirectTo: 'home' }];
 
 
 @NgModule({

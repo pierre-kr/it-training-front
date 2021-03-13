@@ -13,9 +13,11 @@ export class FormationService {
   findById(id: number): Observable<Formation> {
     return this.httpClient.get<Formation>(`http://localhost:8080/formations/${id}`);
   }
+  
   findAll(): Observable<Formation[]> {
     return this.httpClient.get<Formation[]>(`http://localhost:8080/formations`);
   }
+
   create(formation: Formation): Observable<Formation> {
     return this.httpClient.post<Formation>(`http://localhost:8080/formations`, formation);
   }

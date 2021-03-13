@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Formation } from 'src/app/models/Formation';
 import { FormationService } from 'src/app/services/formation.service';
 import { ActivatedRoute, Router } from '@angular/router';

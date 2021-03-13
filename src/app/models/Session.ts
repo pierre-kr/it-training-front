@@ -1,6 +1,6 @@
-import { Formateur } from "./Formateur";
-import { Formation } from "./Formation";
-import { Lieu } from "./Lieu";
+import { Lieu } from './Lieu';
+import { Formateur } from './Formateur';
+import { Formation } from './Formation';
 
 export class Session {
     constructor(
@@ -17,32 +17,32 @@ export class Session {
         private _formation: Formation,
         private _lieu: Lieu,
     ) { }
-    get id() {
+    get id(): number {
         return this._id;
     }
-    get dateDebut() {
+    get dateDebut(): string {
         return this._dateDebut;
     }
-    get dateFin() {
+    get dateFin(): string {
         return this._dateFin;
     }
-    get duree() {
+    get duree(): number {
         return this._duree;
     }
-    get validationSession() {
+    get validationSession(): boolean {
         return this._validationSession;
     }
-    get prix() {
+    get prix(): number {
         return this._prix;
     }
-    get reference() {
+    get reference(): string {
         return this._reference;
     }
-    get salle() {
+    get salle(): string {
         return this._salle;
     }
-    get type() {
-        return this._type;
+    get typeSession(): string {
+        return this._typeSession;
     }
     get formateur() {
         return this._formateur;
@@ -50,7 +50,7 @@ export class Session {
     get formation() {
         return this._formation;
     }
-    get lieu() {
+    get lieu(): Lieu {
         return this._lieu;
     }
 }

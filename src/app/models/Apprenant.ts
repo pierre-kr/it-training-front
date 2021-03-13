@@ -1,3 +1,5 @@
+import { Lieu } from './Lieu';
+
 export class Apprenant {
     constructor(
         private _id: number,
@@ -8,42 +10,42 @@ export class Apprenant {
         private _prenom: string,
         private _societe: string,
         private _telephone: string,
-        private _lieuId: number
-    ) { }
+        private _adresse: Lieu
+    ){}
 
-    get id(): number {
+    get id(): number{
         return this._id;
     }
 
-    get civilite(): string {
+    get civilite(): string{
         return this._civilite;
     }
 
-    get email(): string {
+    get email(): string{
         return this._email;
     }
 
-    get fonction(): string {
+    get fonction(): string{
         return this._fonction;
     }
 
-    get nom(): string {
+    get nom(): string{
         return this._nom;
     }
 
-    get prenom(): string {
+    get prenom(): string{
         return this._prenom;
     }
 
-    get societe(): string {
+    get societe(): string{
         return this._societe;
     }
 
-    get telephone(): string {
+    get telephone(): string{
         return this._telephone;
     }
 
-    get lieuId(): number {
-        return this._lieuId;
+    get adresse(): Lieu{
+        return this._adresse;
     }
 }
