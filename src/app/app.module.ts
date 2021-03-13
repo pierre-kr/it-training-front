@@ -81,7 +81,7 @@ import { AuthGuardService } from './services/auth-guard.service';
     ThemeFormulaireComponent,
     ResponsableFormulaireComponent,
     ResposableComponent,
-    FormateurComponent
+    FormateurComponent,
     LoginComponent,
     DashboardComponent
   ],
@@ -109,8 +109,7 @@ import { AuthGuardService } from './services/auth-guard.service';
     InputTextModule,
     ProgressBarModule
   ],
-  providers: [FormateurService],
-  providers: [AuthService,AuthGuardService],
+  providers: [FormateurService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
