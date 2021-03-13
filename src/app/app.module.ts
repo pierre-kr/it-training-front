@@ -32,6 +32,10 @@ import { EvaluationSessionComponent } from './formulaires/evaluation-session/eva
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { AuthService } from './services/auth.service';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 
@@ -50,7 +54,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ThemeFormationsComponent,
     InscriptionSessionComponent,
     EvaluationSessionComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +73,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
