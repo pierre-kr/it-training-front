@@ -41,13 +41,13 @@ export class Session {
     get salle(): string {
         return this._salle;
     }
-    get typeSession(): string {
-        return this._typeSession;
+    get type(): string {
+        return this._type;
     }
-    get formateur() {
+    get formateur(): Formateur {
         return this._formateur;
     }
-    get formation() {
+    get formation(): Formation{
         return this._formation;
     }
     get lieu(): Lieu {
