@@ -57,6 +57,12 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './services/auth.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { ChartsComponent } from './components/charts/charts.component';
+import { ChartsModule } from 'ng2-charts';
+import { LineChartComponent } from './components/charts-group/line-chart/line-chart.component';
+import { BarChartComponent } from './components/charts-group/bar-chart/bar-chart.component';
+import { DoughnutChartComponent } from './components/charts-group/doughnut-chart/doughnut-chart.component';
 
 
 
@@ -83,7 +89,12 @@ import { AuthGuardService } from './services/auth-guard.service';
     ResposableComponent,
     FormateurComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    SideBarComponent,
+    ChartsComponent,
+    LineChartComponent,
+    BarChartComponent,
+    DoughnutChartComponent
   ],
   imports: [
     BrowserModule,
@@ -101,6 +112,7 @@ import { AuthGuardService } from './services/auth-guard.service';
     TableModule,
     FormsModule,
     ReactiveFormsModule,
+    ChartsModule,
     CalendarModule,
     SliderModule,
     DialogModule,
