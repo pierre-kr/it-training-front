@@ -33,6 +33,9 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { AuthService } from './services/auth.service';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 
@@ -52,7 +55,8 @@ import { LoginComponent } from './components/login/login.component';
     InscriptionSessionComponent,
     EvaluationSessionComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +73,7 @@ import { LoginComponent } from './components/login/login.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,29 +1,38 @@
 <div class="container">
-  <form class="form-signin" action="" method="POST">
+  <form class="form-signin" #f="ngForm" (ngSubmit)="signIn(f.value)">
     <h3>Connexion</h3>
+    <div *ngIf="invalidLogin" class="alert alert-danger">
+      <p>email ou mot de passe non valid!</p>
+    </div>
     <div class="form-group">
       <input
         class="form-control"
-        type="text"
+        type="email"
+        name="email"
+        ngModel
         placeholder="Adresse Email"
         minlength="5"
         maxlength="255"
         autofocus
+        required
       />
     </div>
     <div class="form-group">
       <input
         class="form-control"
         type="password"
+        name="password"
+        ngModel
         placeholder="Mot de passe"
         maxlength="255"
+        required
       />
     </div>
     <div class="form-group">
       <input type="checkbox" id="remember-me" />
       <label for="remember-me"> Se souvenir de moi</label>
     </div>
-    <button class="btn">Sign in</button>
+    <button class="btn" type="submit">Sign in</button>
     <p class="muted">Or Sign Up</p>
   </form>
 </div>
