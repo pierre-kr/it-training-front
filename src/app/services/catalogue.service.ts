@@ -8,9 +8,9 @@ import { Theme } from '../models/Theme';
 })
 export class CatalogueService {
 
-  constructor(private httpCatalogue:HttpClient) { }
+  constructor(private httpCatalogue: HttpClient) { }
 
-  getAll() : Observable<Theme[]> {
-    return this.httpCatalogue.get<Theme[]>("http://localhost:8080/themes")
+  getAll(): Observable<Theme[]> {
+    return this.httpCatalogue.get<Theme[]>('http://localhost:8080/themes');
   }
 }
