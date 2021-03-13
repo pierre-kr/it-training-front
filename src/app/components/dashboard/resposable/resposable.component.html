@@ -1,6 +1,6 @@
 
 
-<p-table [value]="formateurs" dataKey="id" editMode="row">
+<p-table [value]="responsables" dataKey="id" editMode="row">
     <ng-template pTemplate="header">
         <tr>
             <th *ngFor="let col of cols">
@@ -8,15 +8,15 @@
             </th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-formateur let-editing="editing" let-ri="rowIndex">
+    <ng-template pTemplate="body" let-responsable let-editing="editing" let-ri="rowIndex">
         <tr>
             <td *ngFor="let col of cols" pEditableColumn>
                 <p-cellEditor>
                     <ng-template pTemplate="input">
-                        <input pInputText type="text" [(ngModel)]="formateur[col.field]">
+                        <input pInputText type="text" [(ngModel)]="responsable[col.field]">
                     </ng-template>
                     <ng-template pTemplate="output">
-                        {{formateur[col.field]}}
+                        {{responsable[col.field]}}
                     </ng-template>
                 </p-cellEditor>
             </td>

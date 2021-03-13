@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
+import { FormationFormulaireComponent } from './components/dashboard/formation-formulaire/formation-formulaire.component';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import { EvaluationSessionComponent } from './formulaires/evaluation-session/evaluation-session.component';
 import { InscriptionSessionComponent } from './formulaires/inscription-session/inscription-session.component';

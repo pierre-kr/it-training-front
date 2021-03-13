@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService, SelectItem } from 'primeng/api';
-import { Formateur } from 'src/app/models/Formateur';
-import { FormateurService } from 'src/app/services/formateur.service';
+import { Responsable } from 'src/app/models/Responsable';
+import { ResponsableService } from 'src/app/services/responsable.service';
 
 @Component({
   selector: 'app-resposable',
@@ -20,15 +20,15 @@ export class ResposableComponent implements OnInit {
 
   statuses: SelectItem[];
 
-  clonedFormateurs: { [s: string]: Formateur; } = {};
+  clonedResponsables: { [s: string]: Responsable; } = {};
 
-  formateurs: Formateur[];
+  responsables: Responsable[];
   cols: any[];
 
-  constructor(private formateurService: FormateurService, private messageService: MessageService) { }
+  constructor(private responsableService: ResponsableService, private messageService: MessageService) { }
 
   ngOnInit(): void {
-    this.formateurService.getCarsSmall().then(formateurs => { this.formateurs = formateurs; console.log(this.formateurs); });
+    this.responsableService.getCarsSmall().then(Responsables => { this.responsables = Responsables; console.log(this.responsables); });
 
     this.cols = [
       { field: 'id', header: 'id' },
@@ -42,18 +42,18 @@ export class ResposableComponent implements OnInit {
     ];
   }
 
-  // onRowEditInit(formateur: Formateur) {
-  //   console.log(formateur);
-  //   this.clonedFormateurs[formateur.id] = { ...formateur };
+  // onRowEditInit(Responsable: Responsable) {
+  //   console.log(Responsable);
+  //   this.clonedResponsables[Responsable.id] = { ...Responsable };
   // }
-  // onRowEditSave(formateur: Formateur) {
-  //   delete this.clonedFormateurs[formateur.id];
+  // onRowEditSave(Responsable: Responsable) {
+  //   delete this.clonedResponsables[Responsable.id];
   //   this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Product is updated' });
 
   // }
 
-  // onRowEditCancel(formateur: Formateur, index: number) {
-  //   this.formateurs[index] = this.clonedFormateurs[formateur.id];
-  //   delete this.clonedFormateurs[formateur.id];
+  // onRowEditCancel(Responsable: Responsable, index: number) {
+  //   this.Responsables[index] = this.clonedResponsables[Responsable.id];
+  //   delete this.clonedResponsables[Responsable.id];
   // }
 }
