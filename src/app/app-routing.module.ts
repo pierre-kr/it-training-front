@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
+import { EvaluationSessionComponent } from './formulaires/evaluation-session/evaluation-session.component';
 import { InscriptionSessionComponent } from './formulaires/inscription-session/inscription-session.component';
 import { FormationComponent } from './pages/formation/formation.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -17,14 +18,14 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'catalogue', component: CatalogueComponent},
   {path: 'catalogue/formation', component: FormationComponent},
-  {path: 'inscription', component: InscriptionSessionComponent},
+  { path: 'inscription/session', component: InscriptionSessionComponent },
   {path:'formulaire/formation', component:FormationFormulaireComponent},
   {path:'dashboard', component:DashboardComponent,canActivate:[AuthGuardService],children:[
     {path: 'chart',component:ChartsComponent}
   ]},
+  
   {path: '404', component: PageNotFoundComponent },
   {path: '**', redirectTo: 'home'}];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

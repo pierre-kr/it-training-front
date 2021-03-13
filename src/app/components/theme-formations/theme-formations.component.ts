@@ -9,8 +9,8 @@ import { Theme } from 'src/app/models/Theme';
 })
 export class ThemeFormationsComponent implements OnInit {
 
-  @Input() theme:Theme;
-  formation:Formation;
+  @Input() theme: Theme;
+  formation: Formation;
 
   constructor() { }
 
