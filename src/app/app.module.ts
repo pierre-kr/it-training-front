@@ -36,7 +36,6 @@ import { FormationComponent } from './pages/formation/formation.component';
 import { DescriptionFormationComponent } from './components/formations/description-formation/description-formation.component';
 import { SessionsOfFormationComponent } from './components/formations/sessions-of-formation/sessions-of-formation.component';
 import { ImportantInformationsFormationComponent } from './components/formations/important-informations-formation/important-informations-formation.component';
-
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import { ThemeFormationsComponent } from './components/theme-formations/theme-formations.component';
 import { InscriptionSessionComponent } from './formulaires/inscription-session/inscription-session.component';
@@ -54,7 +53,10 @@ import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { FormateurComponent } from './components/dashboard/formateur/formateur.component';
-
+import { LoginComponent } from './components/login/login.component';
+import { AuthService } from './services/auth.service';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 
@@ -80,6 +82,8 @@ import { FormateurComponent } from './components/dashboard/formateur/formateur.c
     ResponsableFormulaireComponent,
     ResposableComponent,
     FormateurComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -106,6 +110,7 @@ import { FormateurComponent } from './components/dashboard/formateur/formateur.c
     ProgressBarModule
   ],
   providers: [FormateurService],
+  providers: [AuthService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

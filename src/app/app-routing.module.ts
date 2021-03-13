@@ -6,16 +6,19 @@ import { InscriptionSessionComponent } from './formulaires/inscription-session/i
 import { FormationComponent } from './pages/formation/formation.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
-
   { path: 'home', component: HomeComponent },
   { path: 'catalogue', component: CatalogueComponent },
   { path: 'catalogue/formation', component: FormationComponent },
-  { path: 'inscription', component: InscriptionSessionComponent },
-  { path: 'formulaire/formation', component: FormationFormulaireComponent },
+  { path: 'inscription/session', component: InscriptionSessionComponent },
+  { path: 'formulaire/formation', component:FormationFormulaireComponent },
+  { path: 'dashboard', component:DashboardComponent,canActivate:[AuthGuardService] },
   { path: '404', component: PageNotFoundComponent },
-  { path: '**', redirectTo: 'home' }];
+  { path: '**', redirectTo: 'home'} ];
 
 
 @NgModule({
