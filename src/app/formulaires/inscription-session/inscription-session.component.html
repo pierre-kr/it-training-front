@@ -3,58 +3,70 @@
     Vous êtes sur le point de vous inscrire à une session :
     <form [formGroup]="participeFormulaire" (ngSubmit)="onSubmit()">
         Merci de remplir les champs ci-dessous :
-        <div class="adresse" formGroupName="apprenant">
+        <div class="informations" formGroupName="apprenant">
             <div class="civilite">
                 <h4>Civilité* :</h4>
                 <div class="feminin">
-                    <p-radioButton name="civilite" value="F" label="F" formControlName="civilite">
+                    <p-radioButton name="civilite" value="F" label="F" formControlName="civilite" required>
                     </p-radioButton>
                 </div>
                 <div class="masculin">
-                    <p-radioButton name="civilite" value="M" label="M" formControlName="civilite">
+                    <p-radioButton name="civilite" value="M" label="M" formControlName="civilite" required>
                     </p-radioButton>
                 </div>
             </div>
             <div class="identite">
-                <label>
-                    Nom* : <input type="text" formControlName="nom" required>
-                </label>
-                <label>
-                    Prénom* : <input type="text" formControlName="prenom" required>
-                </label>
+                <h4>Identité :</h4>
+                <div class="labels">
+                    <label>
+                        Nom* : <input type="text" formControlName="nom" required>
+                    </label>
+                    <label>
+                        Prénom* : <input type="text" formControlName="prenom" required>
+                    </label>
+                </div>
             </div>
             <div class="adresse" formGroupName="lieu">
-                <label>
-                    Numéro de rue* : <input type="text" formControlName="numero" required>
-                </label>
-                <label>
-                    Nom de rue* : <input type="text" formControlName="rue" required>
-                </label>
-                <label>
-                    Code postal* : <input type="text" formControlName="codepostal" required>
-                </label>
-                <label>
-                    Ville* : <input type="text" formControlName="ville" required>
-                </label>
+                <h4>Adresse :</h4>
+                <div class="labels">
+                    <label>
+                        Numéro de rue* : <input type="text" formControlName="num" required>
+                    </label>
+                    <label>
+                        Nom de rue* : <input type="text" formControlName="rue" required>
+                    </label>
+                    <label>
+                        Code postal* : <input type="text" formControlName="cp" required>
+                    </label>
+                    <label>
+                        Ville* : <input type="text" formControlName="ville" required>
+                    </label>
+                </div>
             </div>
             <div class="contact">
-                <label>
-                    Email* : <input type="email" formControlName="email" required>
-                </label>
-                <label>
-                    Téléphone : <input type="text" formControlName="telephone">
-                </label>
+                <h4>Coordonnées de contact :</h4>
+                <div class="labels">
+                    <label>
+                        Email* : <input type="email" formControlName="email" required>
+                    </label>
+                    <label>
+                        Téléphone : <input type="text" formControlName="tel">
+                    </label>
+                </div>
             </div>
             <div class="complementaires">
-                <label>
-                    Société : <input type="text" formControlName="societe">
-                </label>
-                <label>
-                    Fonction : <input type="text" formControlName="fonction">
-                </label>
+                <h4>Informations complémentaires :</h4>
+                <div class="labels">
+                    <label>
+                        Société : <input type="text" formControlName="societe">
+                    </label>
+                    <label>
+                        Fonction : <input type="text" formControlName="fonction">
+                    </label>
+                </div>
             </div>
         </div>
-        <button type="submit">S'inscrire à la session</button>
+        <button pButton type="submit" label="S'inscrire à la session" class="p-button-lg"></button>
     </form>
     *: champ obligatoire
 </div>

@@ -18,10 +18,10 @@ const routes: Routes = [
   { path: 'catalogue', component: CatalogueComponent },
   { path: 'catalogue/formation', component: FormationComponent },
   { path: 'inscription/session', component: InscriptionSessionComponent },
-  { path: 'formulaire/formation', component:FormationFormulaireComponent },
-  { path: 'dashboard', component:DashboardComponent,canActivate:[AuthGuardService] },
+  { path: 'formulaire/formation', component: FormationFormulaireComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuardService] },
   { path: '404', component: PageNotFoundComponent },
-  { path: 'evaluation', component: EvaluationSessionComponent },
+  { path: 'evaluation/participe', component: EvaluationSessionComponent },
   { path: '**', redirectTo: 'home' }];
 
 

@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Participe } from 'src/app/models/Participe';
 import { Session } from 'src/app/models/Session';
 import { ParticipeService } from 'src/app/services/participe.service';
@@ -16,11 +16,10 @@ export class InscriptionSessionComponent implements OnInit {
   id: number;
   participeFormulaire: FormGroup;
   session: Session;
-  @Output() ajoutParticipants = new EventEmitter();
 
   constructor(
-    private formBuilder: FormBuilder,
-    private participeService: ParticipeService, private sessionService: SessionService, private route: ActivatedRoute) {
+    private formBuilder: FormBuilder, private sessionService: SessionService, private participeService: ParticipeService,
+    private route: ActivatedRoute, private router: Router) {
     this.route.queryParams.subscribe(params => {
       this.id = params.id;
     });
@@ -31,18 +30,18 @@ export class InscriptionSessionComponent implements OnInit {
 
       session: [],
       apprenant: this.formBuilder.group({
-        civilite: [''],
-        nom: [''],
-        prenom: [''],
+        civilite: ['', Validators.required],
+        nom: ['', Validators.required],
+        prenom: ['', Validators.required],
         societe: [''],
         fonction: [''],
-        telephone: [''],
-        email: [''],
+        tel: [''],
+        email: ['', Validators.required],
         lieu: this.formBuilder.group({
-          numero: [''],
-          rue: [''],
-          codepostal: [''],
-          ville: ['']
+          num: ['', Validators.required],
+          rue: ['', Validators.required],
+          cp: ['', Validators.required],
+          ville: ['', Validators.required]
         })
       })
     });
@@ -62,6 +61,9 @@ export class InscriptionSessionComponent implements OnInit {
     const participe: Participe = this.participeFormulaire.value;
     participe.session = this.session;
     console.log(this.participeFormulaire.value);
-    this.participeService.create(this.participeFormulaire.value).subscribe(console.log);
+    if (this.participeFormulaire.status === 'VALID') {
+      this.participeService.create(this.participeFormulaire.value).subscribe(console.log);
+      this.router.navigate(['/home']);
+    }
   }
 }
