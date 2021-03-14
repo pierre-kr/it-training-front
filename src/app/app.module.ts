@@ -42,13 +42,13 @@ import { ThemeFormationsComponent } from './components/theme-formations/theme-fo
 import { InscriptionSessionComponent } from './formulaires/inscription-session/inscription-session.component';
 import { EvaluationSessionComponent } from './formulaires/evaluation-session/evaluation-session.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { FormationFormulaireComponent } from './pages/formation-formulaire/formation-formulaire.component';
+import { FormationFormulaireComponent } from './components/dashboard/formation-formulaire/formation-formulaire.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormateurFormulaireComponent } from './components/dashboard/formateur-formulaire/formateur-formulaire.component';
 import { SessionFormulaireComponent } from './components/dashboard/session-formulaire/session-formulaire.component';
 import { ThemeFormulaireComponent } from './components/dashboard/theme-formulaire/theme-formulaire.component';
 import { ResponsableFormulaireComponent } from './components/dashboard/responsable-formulaire/responsable-formulaire.component';
-import { ResposableComponent } from './components/dashboard/resposable/resposable.component';
+import { ResponsableComponent } from './components/dashboard/responsable/responsable.component';
 import { FormateurService } from './services/formateur.service';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
@@ -58,6 +58,13 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './services/auth.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { ChartsComponent } from './components/charts/charts.component';
+import { ChartsModule } from 'ng2-charts';
+import { LineChartComponent } from './components/charts-group/line-chart/line-chart.component';
+import { BarChartComponent } from './components/charts-group/bar-chart/bar-chart.component';
+import { DoughnutChartComponent } from './components/charts-group/doughnut-chart/doughnut-chart.component';
+import { SessionComponent } from './components/dashboard/session/session.component';
 
 
 
@@ -81,10 +88,16 @@ import { AuthGuardService } from './services/auth-guard.service';
     SessionFormulaireComponent,
     ThemeFormulaireComponent,
     ResponsableFormulaireComponent,
-    ResposableComponent,
+    ResponsableComponent,
     FormateurComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    SideBarComponent,
+    ChartsComponent,
+    LineChartComponent,
+    BarChartComponent,
+    DoughnutChartComponent,
+    SessionComponent
   ],
   imports: [
     BrowserModule,
@@ -102,6 +115,7 @@ import { AuthGuardService } from './services/auth-guard.service';
     TableModule,
     FormsModule,
     ReactiveFormsModule,
+    ChartsModule,
     CalendarModule,
     SliderModule,
     DialogModule,

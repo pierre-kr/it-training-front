@@ -22,5 +22,10 @@ export class SessionService {
     console.log(session);
     return this.httpClient.post<Session>(`http://localhost:8080/sessions`, session);
   }
-    
+  getCarsSmall(): any {
+    return this.findAll()
+      .toPromise()
+      .then(res => <Session[]>res)
+      .then(data => { return data; });
+  }
 }
