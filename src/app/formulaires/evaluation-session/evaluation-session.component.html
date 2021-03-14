@@ -1,21 +1,10 @@
 <h2>Evaluation</h2>
 <div class="evaluation">
     Vous êtes sur le point d'évaluer une session.
-    <form [formGroup]="apprenantGet" (ngSubmit)="checkApprenant()">
-        <label>
-            Veuillez saisir votre adresse mail : <input type="text" formControlName="email">
-        </label>
-        <button type="submit">Confirmer</button>
-    </form>
-    <form [formGroup]="sessionFormulaire">
-        <label>
-            Veuillez saisir votre adresse mail : <input type="email" formControlName="session">
-        </label>
-    </form>
-    <form [formGroup]="evaluationFormulaire" (ngSubmit)="onSubmit()">
+    <form [formGroup]="evaluationFormulaire" (ngSubmit)="saveEvaluation()">
         <div class="formulaire" *ngFor="let critere of criteres; index as i">
-            {{criteresFront[i]}} : 
-            <div class={{critere}} *ngFor="let note of notes"> 
+            <h4>{{criteresFront[i]}} :</h4> 
+            <div class="critere" *ngFor="let note of notes"> 
                 <div>
                     <p-radioButton name={{critere}} value={{note}} label={{note}} formControlName={{critere}} required>
                     </p-radioButton>

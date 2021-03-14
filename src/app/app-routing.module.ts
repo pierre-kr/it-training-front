@@ -19,13 +19,13 @@ const routes: Routes = [
   {path: 'catalogue', component: CatalogueComponent},
   {path: 'catalogue/formation', component: FormationComponent},
   { path: 'inscription/session', component: InscriptionSessionComponent },
-  {path:'formulaire/formation', component:FormationFormulaireComponent},
+  { path: 'formulaire/formation', component: FormationFormulaireComponent },
   {path:'dashboard', component:DashboardComponent,canActivate:[AuthGuardService],children:[
     {path: 'chart',component:ChartsComponent}
   ]},
-  
-  {path: '404', component: PageNotFoundComponent },
-  {path: '**', redirectTo: 'home'}];
+  { path: '404', component: PageNotFoundComponent },
+  { path: 'evaluation/participe', component: EvaluationSessionComponent },
+  { path: '**', redirectTo: 'home' }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

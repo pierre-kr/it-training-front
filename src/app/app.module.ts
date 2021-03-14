@@ -24,6 +24,7 @@ import { SliderModule } from 'primeng/slider';
 import { DialogModule } from 'primeng/dialog';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ContextMenuModule } from 'primeng/contextmenu';
+import {ListboxModule} from 'primeng/listbox';
 
 
 
@@ -121,7 +122,8 @@ import { SessionComponent } from './components/dashboard/session/session.compone
     MultiSelectModule,
     ContextMenuModule,
     InputTextModule,
-    ProgressBarModule
+    ProgressBarModule,
+    ListboxModule
   ],
   providers: [FormateurService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]

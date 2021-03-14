@@ -1,0 +1,31 @@
+.evaluation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: lightgray;
+    border-style: solid;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.critere {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+}
+h4 {
+    width: 300px;
+    text-align: right;
+    padding-right: 50px;
+}
