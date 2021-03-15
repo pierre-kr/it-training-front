@@ -25,7 +25,7 @@ const routes: Routes = [
   ]},
   { path: '404', component: PageNotFoundComponent },
   { path: 'evaluation/participe', component: EvaluationSessionComponent },
-  { path: '**', redirectTo: 'home' }];
+  { path: '**', redirectTo: '404' }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
