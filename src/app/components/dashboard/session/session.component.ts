@@ -32,17 +32,17 @@ export class SessionComponent implements OnInit {
 
     this.cols = [
       { field: 'id', header: 'id' },
-      { field: 'dateDebut', header: 'dateDebut' },
-      { field: 'dateFin', header: 'dateFin' },
-      { field: 'duree', header: 'duree' },
-      { field: 'validationSession', header: 'validationSession' },
-      { field: 'prix', header: 'prix' },
-      { field: 'reference', header: 'reference' },
-      { field: 'salle', header: 'salle' },
-      { field: 'type', header: 'type' },
-      { field: 'formateur.nom', header: 'formateur' },
-      { field: 'formation.titre', header: 'formation' },
-      { field: 'lieu.ville', header: 'lieu' }
+      { field: 'dateDebut', header: 'Date de Debut' },
+      { field: 'dateFin', header: 'Date de Fin' },
+      { field: 'duree', header: 'Duree' },
+      { field: 'validationSession', header: 'Validation Session' },
+      { field: 'prix', header: 'Prix' },
+      { field: 'reference', header: 'Reference' },
+      { field: 'salle', header: 'Salle' },
+      { field: 'type', header: 'Type' },
+      { field: 'formateur.nom', header: 'Formateur' },
+      { field: 'formation.titre', header: 'Formation' },
+      { field: 'lieu.ville', header: 'Lieu' }
     ];
   }
 }

@@ -13,25 +13,101 @@
           >
         </li>
         <li>
-          <a href="#"
+          <a [routerLink]="['/dashboard/formation']"
             ><i class="fa fa-graduation-cap"></i>
             <span class="">Formation</span></a
           >
+          <ul class="nav-flyout">
+            <li>
+              <a [routerLink]="['/dashboard/formation-liste']"
+                ><i class="ion-ios-color-filter-outline"></i>Liste De
+                Formations</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['/dashboard/formation']"
+                ><i class="ion-ios-clock-outline"></i>Ajouter Une Formation</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class=""></i></a>
+            </li>
+            <li>
+              <a href="#"><i class=""></i></a>
+            </li>
+          </ul>
         </li>
         <li>
-          <a href="#"
+          <a [routerLink]="['/dashboard/formateur']"
             ><i class="fa fa-id-card-o"></i> <span class="">Formateur</span></a
           >
+          <ul class="nav-flyout">
+            <li>
+              <a [routerLink]="['/dashboard/formateur-liste']"
+                ><i class="ion-ios-color-filter-outline"></i>Liste De
+                Formateurs</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['/dashboard/formateur']"
+                ><i class="ion-ios-clock-outline"></i>Ajouter Un Formateur</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class=""></i></a>
+            </li>
+            <li>
+              <a href="#"><i class=""></i></a>
+            </li>
+          </ul>
         </li>
         <li>
-          <a href="#"
-            ><i class="fa fa-cubes"></i> <span class="">Domaine</span></a
+          <a [routerLink]="['/dashboard/session']"
+            ><i class="fa fa-cubes"></i> <span class="">Session</span></a
           >
+          <ul class="nav-flyout">
+            <li>
+              <a [routerLink]="['/dashboard/session-liste']"
+                ><i class="ion-ios-color-filter-outline"></i>Liste De
+                Sessions</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['/dashboard/session']"
+                ><i class="ion-ios-clock-outline"></i>Ajouter Une Session</a
+              >
+            </li>
+            <li>
+              <a><i class=""></i></a>
+            </li>
+            <li>
+              <a><i class=""></i></a>
+            </li>
+          </ul>
         </li>
         <li>
-          <a href="#"
+          <a [routerLink]="['/dashboard/responsable']"
             ><i class="fa fa-group"></i> <span class="">Responsable</span></a
           >
+          <ul class="nav-flyout">
+            <li>
+              <a [routerLink]="['/dashboard/responsable-liste']"
+                ><i class="ion-ios-color-filter-outline"></i>Liste De
+                Responsable</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['/dashboard/responsable']"
+                ><i class="ion-ios-clock-outline"></i>Ajouter Un Responsable</a
+              >
+            </li>
+            <li>
+              <a><i class=""></i></a>
+            </li>
+            <li>
+              <a><i class=""></i></a>
+            </li>
+          </ul>
         </li>
         <li>
           <a href="#"
@@ -40,7 +116,7 @@
           >
         </li>
         <li>
-          <a href="#"
+          <a [routerLink]="['/dashboard/responsable-list']"
             ><i class="fa fa-cogs"></i> <span class="">Réglage</span></a
           >
         </li>

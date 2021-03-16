@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormateurService } from 'src/app/services/formateur.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formateur-formulaire',
@@ -29,7 +30,14 @@ export class FormateurFormulaireComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.formateurService.create(this.formateurForm.value).subscribe();
+    this.formateurService.create(this.formateurForm.value).subscribe(()=>{
+      Swal.fire(
+        'Good job!',
+        'Vous avez enregistrer un nouveau formateur!',
+        'success'
+      )
+      this.formateurForm.reset();
+    });
   }
 
 }
