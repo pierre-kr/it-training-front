@@ -53,6 +53,8 @@ export class InscriptionSessionComponent implements OnInit {
     });
     this.sessionService.findById(this.id).subscribe((sessionTrouvee) => {
       this.session = sessionTrouvee;
+    }, (error) => {
+      this.router.navigate(['/404']);
     });
     // console.log(this.session)
   }
@@ -64,6 +66,9 @@ export class InscriptionSessionComponent implements OnInit {
     if (this.participeFormulaire.status === 'VALID') {
       this.participeService.create(this.participeFormulaire.value).subscribe(console.log);
       this.router.navigate(['/home']);
+      alert(`L'inscription à la session a été confirmée`);
+    } else {
+      alert(`Erreur : Un ou plusieurs champ(s) obligatoires n'ont pas été renseigné(s)`);
     }
   }
 }

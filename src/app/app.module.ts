@@ -25,12 +25,14 @@ import { DialogModule } from 'primeng/dialog';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ContextMenuModule } from 'primeng/contextmenu';
 import {ListboxModule} from 'primeng/listbox';
-
+import {PanelModule} from 'primeng/panel';
+import {CardModule} from 'primeng/card';
 
 
 import { OrderListModule } from 'primeng/orderlist';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
+
 
 
 import { FormationComponent } from './pages/formation/formation.component';
@@ -127,7 +129,9 @@ import { ContactComponent } from './pages/contact/contact.component';
     ContextMenuModule,
     InputTextModule,
     ProgressBarModule,
-    ListboxModule
+    ListboxModule,
+    PanelModule,
+    CardModule
   ],
   providers: [FormateurService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]

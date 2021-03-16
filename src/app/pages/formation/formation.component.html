@@ -1,6 +1,11 @@
 <div class="formation">
-    <div class="titre">
-        <h1>{{formation.titre}}</h1>
+    <div class="contenu-formation">
+        <div class="titre">
+            <h2>{{formation.titre}}</h2>
+        </div>
+        <div class="important-info">
+            <app-important-informations-formation [formation]="formation"></app-important-informations-formation>
+        </div>
     </div>
     <div class="contenu-formation">
         <div class="description-formation">
@@ -8,8 +13,7 @@
                 [audience]="formation.audience" [prerequis]="formation.prerequis">
             </app-description-formation>
         </div>
-        <div class="important-info">
-            <app-important-informations-formation [formation]="formation"></app-important-informations-formation>
+        <div class="session-info">
             <app-sessions-of-formation [sessions]="formation.sessions"></app-sessions-of-formation>
         </div>
     </div>
