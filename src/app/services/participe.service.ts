@@ -17,8 +17,4 @@ export class ParticipeService {
   findById(id: number): Observable<Participe>{
     return this.httpClient.get<Participe>(`http://localhost:8080/participe/${id}`);
   }
-
-  update(participe: Participe): Observable<Participe>{
-    return this.httpClient.put<Participe>('http://localhost:8080/participe', participe);
-  }
 }

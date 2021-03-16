@@ -1,62 +1,54 @@
-h2 {
+* {
+    color: black;
+}
+
+h2, h3{
+    display: flex;
+    justify-content: center;
     text-align: center;
+    color: blue;
 }
 
 h4 {
     width: 280px;
-    text-align: right;
-    padding-right: 50px;
+    text-align: left;
+    color: black;
 }
 
 .inscription{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 5%;
+    background-color: rgb(243, 231, 231);
 }
 
-.civilite {
-    display: flex;
-    align-items: center;
+.warning {
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-.identite {
+.civilite, .identite, .adresse, .contact, .complementaires {
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
-.adresse {
+.feminin, .masculin {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-}
-
-.contact{
-    display: flex;
-    align-items: center;
-}
-
-.complementaires{
-    display: flex;
-    align-items: center;
-}
-
-.feminin {
-    display: flex;
-    align-items: center;
-}
-
-.masculin {
-    display: flex;
-    align-items: center;
+    margin: 5px;
 }
 
 form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: lightgray;
-    border-style: solid;
-    border-radius: 10px;
+    background-color: rgb(128, 178, 243);
     text-align: center;
-    margin: 5px;
+    width: 50%;
+    font-size: medium;
 }
 
 label {
@@ -65,12 +57,12 @@ label {
 
 .labels {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 850px;
+    flex-direction: column;
+    text-align: right;
 }
 
 button {
     margin: auto;
     width: 200px;
+    color: white;
 }

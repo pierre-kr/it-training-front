@@ -15,7 +15,7 @@ export class EvaluationService {
     return this.httpClient.post<Evaluation>('http://localhost:8080/evaluations', evaluation);
   }
 
-  findAllSessionsByEmail(email: String): Observable<Session[]>{
+  findAllSessionsByEmail(email: string): Observable<Session[]>{
     return this.httpClient.get<Session[]>(`http://localhost:8080/participe/sessions/${email}`);
   }
 }

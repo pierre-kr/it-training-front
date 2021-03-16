@@ -1,6 +1,10 @@
-<h2>Evaluation</h2>
 <div class="evaluation">
-    Vous êtes sur le point d'évaluer une session.
+    <div class="warning">
+        <h2>EVALUATION</h2>
+        <h3>Vous êtes sur le point d'évaluer une session à laquelle vous avez participé</h3>
+        <h3>Merci d'évaluer chaque critère présent dans ce formulaire.</h3>
+        <h3>L'évaluation que vous enverrez nous permettra d'améliorer le déroulement des prochaines sessions de formation</h3>
+    </div>
     <form [formGroup]="evaluationFormulaire" (ngSubmit)="saveEvaluation()">
         <div class="formulaire" *ngFor="let critere of criteres; index as i">
             <h4>{{criteresFront[i]}} :</h4> 
@@ -11,6 +15,6 @@
                 </div>
             </div>
         </div>
-        <button type="submit">Soumettre l'évaluation</button>
+        <button pButton type="submit" label="Soumettre l'évaluation"></button>
     </form>
 </div>
