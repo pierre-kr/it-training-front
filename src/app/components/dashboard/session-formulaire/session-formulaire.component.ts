@@ -41,7 +41,7 @@ export class SessionFormulaireComponent implements OnInit {
 
     this.sessionForm = this.formBuilder.group({
       formation: [],
-      dateDeb: [''],
+      dateDebut: [''],
       dateFin: [''],
       duree: [''],
       prix: [''],

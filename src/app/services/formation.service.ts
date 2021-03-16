@@ -21,5 +21,10 @@ export class FormationService {
   create(formation: Formation): Observable<Formation> {
     return this.httpClient.post<Formation>(`http://localhost:8080/formations`, formation);
   }
-
+  getCarsSmall(): any {
+    return this.findAll()
+      .toPromise()
+      .then(res => <Formation[]>res)
+      .then(data => { return data; });
+  }
 }

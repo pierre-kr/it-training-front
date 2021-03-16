@@ -1,0 +1,28 @@
+<p-table [value]="formations" dataKey="id" editMode="row">
+    <ng-template pTemplate="header">
+        <tr>
+            <th *ngFor="let col of cols">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-formation let-editing="editing" let-ri="rowIndex">
+        <tr>
+            <td *ngFor="let col of cols" pEditableColumn>
+                <p-cellEditor>
+                    <ng-template pTemplate="input">
+                        <input pInputText type="text" [(ngModel)]="formation[col.field]">
+                    </ng-template>
+                    <ng-template pTemplate="output">
+                        {{formation[col.field]}}
+                    </ng-template>
+                </p-cellEditor>
+            </td>
+            <!-- <td style="text-align:center">
+                <button *ngIf="!editing" pButton pRipple type="button" pInitEditableRow icon="pi pi-pencil" (click)="onRowEditInit(formation)" class="p-button-rounded p-button-text"></button>
+                <button *ngIf="editing" pButton pRipple type="button" pSaveEditableRow icon="pi pi-check" (click)="onRowEditSave(formation)" class="p-button-rounded p-button-text p-button-success p-mr-2"></button>
+                <button *ngIf="editing" pButton pRipple type="button" pCancelEditableRow icon="pi pi-times" (click)="onRowEditCancel(formation, ri)" class="p-button-rounded p-button-text p-button-danger"></button>
+            </td> -->
+        </tr>
+    </ng-template>
+</p-table>

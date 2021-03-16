@@ -22,6 +22,7 @@ import { ResponsableFormulaireComponent } from './components/dashboard/responsab
 
 const routes: Routes = [
 
+  {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'catalogue', component: CatalogueComponent},

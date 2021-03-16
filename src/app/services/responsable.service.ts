@@ -16,6 +16,11 @@ export class ResponsableService {
     return this.httpClient.get<Responsable[]>(`http://localhost:8080/responsables`);
   }
 
+  create(responsable: Responsable): Observable<Responsable> {
+    console.log(responsable);
+    return this.httpClient.post<Responsable>(`http://localhost:8080/responsables`, responsable);
+  }
+
   getCarsSmall(): any {
     return this.findAll()
       .toPromise()
