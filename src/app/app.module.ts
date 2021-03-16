@@ -25,12 +25,14 @@ import { DialogModule } from 'primeng/dialog';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ContextMenuModule } from 'primeng/contextmenu';
 import {ListboxModule} from 'primeng/listbox';
-
+import {PanelModule} from 'primeng/panel';
+import {CardModule} from 'primeng/card';
 
 
 import { OrderListModule } from 'primeng/orderlist';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
+
 
 
 import { FormationComponent } from './pages/formation/formation.component';
@@ -66,6 +68,8 @@ import { BarChartComponent } from './components/charts-group/bar-chart/bar-chart
 import { DoughnutChartComponent } from './components/charts-group/doughnut-chart/doughnut-chart.component';
 import { SessionComponent } from './components/dashboard/session/session.component';
 import { FormationTabComponent } from './components/dashboard/formationTab/formationTab.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 
@@ -99,7 +103,9 @@ import { FormationTabComponent } from './components/dashboard/formationTab/forma
     BarChartComponent,
     DoughnutChartComponent,
     SessionComponent,
-    FormationTabComponent
+    FormationTabComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -125,7 +131,9 @@ import { FormationTabComponent } from './components/dashboard/formationTab/forma
     ContextMenuModule,
     InputTextModule,
     ProgressBarModule,
-    ListboxModule
+    ListboxModule,
+    PanelModule,
+    CardModule
   ],
   providers: [FormateurService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]

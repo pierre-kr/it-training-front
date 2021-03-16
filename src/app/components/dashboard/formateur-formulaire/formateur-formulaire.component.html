@@ -1,42 +1,37 @@
-<form [formGroup]="formateurForm" (ngSubmit)="onSubmit()" class="form">
-    <h1>Formateur</h1>
-    <div>
-        <label>
-            nom : <input type="text" formControlName="nom">
-        </label>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<div class="main-block">
+  <div class="left-part">
+    <i class="fa fa-id-card-o"></i>
+    <h1>Ajouter un nouveau formateur</h1>
+    <p>
+      Veuillez faire attention à remplir tous les champs du formulaire pour plus
+      de détail veuillez consulter la doc.
+    </p>
+    <div class="btn-group">
+      <a class="btn-item" href="/dashboard/formateur">Documentation</a>
     </div>
-    <div>
-        <label>
-            prenom : <input type="text" formControlName="prenom">
-        </label>
+  </div>
+  <form [formGroup]="formateurForm" (ngSubmit)="onSubmit()" class="form">
+    <div class="title">
+      <i class="fa fa-pencil-alt"></i>
+      <h2 style="color: rgb(66, 66, 248)">NOUVEAU FORMATEUR</h2>
     </div>
-    <div>
-        <label>
-            civilite : <input type="text" formControlName="civilite">
-        </label>
+    <div class="info">
+      <input type="text" formControlName="nom" placeholder="Nom" />
+      <input type="text" formControlName="prenom" placeholder="Prenom" />
+      <input type="text" formControlName="civilite" placeholder="Civilite" />
+      <input type="text" formControlName="fonction" placeholder="Fonction" />
+      <input
+        type="text"
+        formControlName="entreprise"
+        placeholder="Entreprise"
+      />
+      <input type="text" formControlName="email" placeholder="Email" />
+      <input type="text" formControlName="tel" placeholder="Tel" />
+      <button type="submit">Enregistrement</button>
     </div>
-    <div>
-        <label>
-            fonction : <input type="text" formControlName="fonction">
-        </label>
-    </div>
-    <div>
-        <label>
-            entreprise : <input type="text" formControlName="entreprise">
-        </label>
-    </div>
-    <div>
-        <label>
-            email : <input type="text" formControlName="email">
-        </label>
-    </div>
-    <div>
-        <label>
-            tel : <input type="text" formControlName="tel">
-        </label>
-    </div>
-
-    <button type="submit">enregistrement</button>
-
-
-</form>
+  </form>
+</div>

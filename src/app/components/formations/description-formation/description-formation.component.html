@@ -1,14 +1,24 @@
-<p>
+<p class="description">
     {{description}}
 </p>
+<div class="infos">
+    <p-panel header="Public">
+        <p>{{audience}}</p>
+    </p-panel>
+    <p-panel header="Pré-requis">
+        <p>{{prerequis}}</p>
+    </p-panel>
+    <p-panel header="Contenu">
+        <p>{{contenu}}</p>
+    </p-panel>
+</div>
+
+<!--
 <p-accordion [multiple]="true">
     <p-accordionTab header="Public" [selected]="true">
-        {{audience}}
     </p-accordionTab>
     <p-accordionTab header="Pré-requis" [selected]="true">
-        {{prerequis}}
     </p-accordionTab>
     <p-accordionTab header="Contenu" [selected]="true">
-        {{contenu}}
     </p-accordionTab>
-</p-accordion>
+</p-accordion>-->

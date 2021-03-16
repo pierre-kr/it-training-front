@@ -1,59 +1,119 @@
-<form [formGroup]="sessionForm" (ngSubmit)="onSubmit()" class="form">
-    <h1>Session</h1>
-    <div>
+<!-- <form [formGroup]="sessionForm" (ngSubmit)="onSubmit()" class="form">
+  <h1>Session</h1>
+  <div>
+    <label>formation : </label>
+    <p-cascadeSelect
+      [(ngModel)]="selectedFormation"
+      [options]="themes"
+      optionLabel="titre"
+      optionGroupLabel="nom"
+      [optionGroupChildren]="['formations']"
+      [style]="{ minWidth: '14rem' }"
+      formControlName="formation"
+    >
+    </p-cascadeSelect>
+  </div>
+  <div>
+    <label>
+      date Debut : <input type="text" formControlName="dateDeb" />
+    </label>
+  </div>
+  <div>
+    <label> date Fin : <input type="text" formControlName="dateFin" /> </label>
+  </div>
+  <div>
+    <label> duree : <input type="text" formControlName="duree" /> </label>
+  </div>
+  <div>
+    <label> prix : <input type="text" formControlName="prix" /> </label>
+  </div>
+  <div>
+    <label> salle : <input type="text" formControlName="salle" /> </label>
+  </div>
+  <div>
+    <label> type : <input type="text" formControlName="type" /> </label>
+  </div>
+  <div>
+    <label formGroupName="lieu">
+      ville : <input type="text" formGroupName="ville" />
+    </label>
+  </div>
+
+  <div>
+    <label>formateur : </label>
+    <p-dropdown
+      [options]="formateurs"
+      [(ngModel)]="selectedFormateur"
+      optionLabel="nom"
+      formControlName="formateur"
+    ></p-dropdown>
+  </div>
+
+  <button type="submit">enregistrement</button>
+</form> -->
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<div class="main-block">
+  <div class="left-part">
+    <i class="fa fa-cubes"></i>
+    <h1>Ajouter une nouvelle Session</h1>
+    <p>
+      Veuillez faire attention à remplir tous les champs du formulaire pour plus
+      de détail veuillez consulter la doc.
+    </p>
+    <div class="btn-group">
+      <a class="btn-item" href="/dashboard/session">Documentation</a>
+    </div>
+  </div>
+  <form [formGroup]="sessionForm" (ngSubmit)="onSubmit()" class="form">
+    <div class="title">
+      <i class="fas fa-pencil-alt"></i>
+      <h2 style="color: rgb(66, 66, 248)">NOUVELLE SESSION</h2>
+    </div>
+    <div class="info">
+      <div>
         <label>formation : </label>
-        <p-cascadeSelect [(ngModel)]="selectedFormation" [options]="themes" optionLabel="titre" optionGroupLabel="nom"
-            [optionGroupChildren]="['formations']" [style]="{'minWidth': '14rem'}" formControlName="formation">
+        <p-cascadeSelect
+          [(ngModel)]="selectedFormation"
+          [options]="themes"
+          optionLabel="titre"
+          optionGroupLabel="nom"
+          [optionGroupChildren]="['formations']"
+          [style]="{ minWidth: '14rem' }"
+          formControlName="formation"
+        >
         </p-cascadeSelect>
-
-    </div>
-    <div>
-        <label>
-            date Debut : <input type="text" formControlName="dateDebut">
+      </div>
+      <input
+        type="text"
+        formControlName="dateDebut"
+        placeholder="Date Début : DD-MM-YYYY"
+      />
+      <input
+        type="text"
+        formControlName="dateFin"
+        placeholder="Date Fin : DD-MM-YYYY"
+      />
+      <input type="text" formControlName="duree" placeholder="Duree" />
+      <input type="text" formControlName="prix" placeholder="Prix" />
+      <input type="text" formControlName="salle" placeholder="Salle" />
+      <input type="text" formControlName="type" placeholder="Type" />
+      <input type="text" formControlName="ville" placeholder="Lieu" />
+      <div class="select-theme">
+        <label
+          >formateur :
+          <p-dropdown
+            [options]="formateurs"
+            [(ngModel)]="selectedFormateur"
+            optionLabel="nom"
+            formControlName="formateur"
+          ></p-dropdown>
         </label>
+      </div>
+      <button type="submit">Enregistrement</button>
     </div>
-    <div>
-        <label>
-            date Fin : <input type="text" formControlName="dateFin">
-        </label>
-    </div>
-    <div>
-        <label>
-            duree : <input type="text" formControlName="duree">
-        </label>
-    </div>
-    <div>
-        <label>
-            prix : <input type="text" formControlName="prix">
-        </label>
-    </div>
-    <div>
-        <label>
-            salle : <input type="text" formControlName="salle">
-        </label>
-    </div>
-    <div>
-        <label>
-            type : <input type="text" formControlName="type">
-        </label>
-    </div>
-    <div>
-        <label  formGroupName="lieu">
-            ville : <input type="text" formGroupName="ville">
-        </label>
-    </div>
-
-
-    <div>
-        <label>formateur : </label>
-            <p-dropdown [options]="formateurs" [(ngModel)]="selectedFormateur" optionLabel="nom" formControlName="formateur"></p-dropdown>
-        
-    </div>
-   
-
-
-
-    <button type="submit">enregistrement</button>
-
-
-</form>
+  </form>
+</div>

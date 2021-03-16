@@ -5,10 +5,7 @@ import { Apprenant } from 'src/app/models/Apprenant';
 import { Evaluation } from 'src/app/models/Evaluation';
 import { Participe } from 'src/app/models/Participe';
 import { Session } from 'src/app/models/Session';
-import { ApprenantService } from 'src/app/services/apprenant.service';
-import { EvaluationService } from 'src/app/services/evaluation.service';
 import { ParticipeService } from 'src/app/services/participe.service';
-import { SessionService } from 'src/app/services/session.service';
 
 @Component({
   selector: 'app-evaluation-session',
@@ -32,9 +29,8 @@ export class EvaluationSessionComponent implements OnInit {
   sessionFormulaire: FormGroup;
   evaluationFormulaire: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private evaluationService: EvaluationService, 
-    private participeService: ParticipeService, private sessionService: SessionService, private route: ActivatedRoute,
-    private router: Router) {
+  constructor(private formBuilder: FormBuilder, private participeService: ParticipeService,
+    private route: ActivatedRoute, private router: Router) {
       this.route.queryParams.subscribe(params => {
         this.id = params.id;
       });
@@ -60,6 +56,8 @@ export class EvaluationSessionComponent implements OnInit {
     });
     this.participeService.findById(this.id).subscribe((participe) => {
       this.participe = participe;
+    }, (error) => {
+      this.router.navigate(['/404']);
     })
   }
 
@@ -68,8 +66,11 @@ export class EvaluationSessionComponent implements OnInit {
     this.participe.evaluation = evaluation;
     console.log(this.participe);
     if (this.evaluationFormulaire.status === 'VALID') {
-      this.participeService.update(this.participe).subscribe(console.log);
+      this.participeService.create(this.participe).subscribe(console.log);
       this.router.navigate(['/home']);
+      alert(`Evaluation envoyée !`);
+    } else {
+      alert(`Erreur : un ou plusieurs critères n'ont pas été évalués`);
     }
   }
 }

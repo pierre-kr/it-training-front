@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Theme } from 'src/app/models/Theme';
 import { FormationService } from 'src/app/services/formation.service';
 import { ThemeService } from 'src/app/services/theme.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formation-formulaire',
@@ -46,7 +47,12 @@ export class FormationFormulaireComponent implements OnInit {
 
   onSubmit(): void {
     this.formationService.create(this.formationForm.value).subscribe((formation) => {
-      console.log(formation);
+      Swal.fire(
+        'Good job!',
+        'Vous avez enregistrer une nouvelle formation!',
+        'success'
+      )
+      this.formationForm.reset();
     });
   }
 

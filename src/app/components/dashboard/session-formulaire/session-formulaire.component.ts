@@ -6,6 +6,7 @@ import { Theme } from 'src/app/models/Theme';
 import { FormateurService } from 'src/app/services/formateur.service';
 import { SessionService } from 'src/app/services/session.service';
 import { ThemeService } from 'src/app/services/theme.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-session-formulaire',
@@ -58,6 +59,13 @@ export class SessionFormulaireComponent implements OnInit {
 
 
   onSubmit(): void {
-    this.sessionService.create(this.sessionForm.value).subscribe(console.log);
+    this.sessionService.create(this.sessionForm.value).subscribe(() => {
+      Swal.fire(
+        'Good job!',
+        'Vous avez enregistrer une nouvelle session!',
+        'success'
+      )
+      this.sessionForm.reset();
+    });
   }
 }

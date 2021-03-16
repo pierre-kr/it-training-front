@@ -1,17 +1,21 @@
-<h2>Inscription</h2>
+
 <div class="inscription">
-    Vous êtes sur le point de vous inscrire à une session :
+    <div class="warning">
+        <h2>INSCRIPTION</h2>
+        <h3>Vous êtes sur le point de vous inscrire à une session de formation.</h3>
+        <h3>Merci de renseigner les informations sur ce formulaire d'inscription.</h3>
+        <h3>Les champs obligatoires sont accompagnés d'un *.</h3>
+    </div>
     <form [formGroup]="participeFormulaire" (ngSubmit)="onSubmit()">
-        Merci de remplir les champs ci-dessous :
         <div class="informations" formGroupName="apprenant">
             <div class="civilite">
                 <h4>Civilité* :</h4>
                 <div class="feminin">
-                    <p-radioButton name="civilite" value="F" label="F" formControlName="civilite" required>
+                    <p-radioButton name="civilite" value="F" label="Madame  " formControlName="civilite" required>
                     </p-radioButton>
                 </div>
                 <div class="masculin">
-                    <p-radioButton name="civilite" value="M" label="M" formControlName="civilite" required>
+                    <p-radioButton name="civilite" value="M" label="Monsieur" formControlName="civilite" required>
                     </p-radioButton>
                 </div>
             </div>
@@ -68,5 +72,4 @@
         </div>
         <button pButton type="submit" label="S'inscrire à la session" class="p-button-lg"></button>
     </form>
-    *: champ obligatoire
 </div>

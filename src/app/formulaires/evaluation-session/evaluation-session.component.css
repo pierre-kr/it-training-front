@@ -1,12 +1,39 @@
+* {
+    color: black;
+}
+
+h2, h3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: blue;
+}
+
+h4 {
+    width: 250px;
+    text-align: right;
+    padding-right: 40px;
+}
+
+form {
+    background-color: rgb(128, 178, 243);
+    width: 65%;
+}
+
 .evaluation {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    flex-direction: column;
-    background-color: lightgray;
-    border-style: solid;
-    border-radius: 10px;
     text-align: center;
-    margin: 5px;
+    margin: 20px;
+    background-color: rgb(243, 231, 231);
+}
+
+.warning {
+    width: 35%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .formulaire {
@@ -14,18 +41,17 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: 12pt;
 }
 
 .critere {
     display: flex;
     align-items: center;
+    padding-right: 10px;
 }
 
-h2 {
-    text-align: center;
-}
-h4 {
-    width: 300px;
-    text-align: right;
-    padding-right: 50px;
+button {
+    background-color: green;
+    font-size: 12pt;
+    color: white;
 }

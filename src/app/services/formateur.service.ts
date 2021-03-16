@@ -17,7 +17,6 @@ export class FormateurService {
     return this.httpClient.get<Formateur[]>(`http://localhost:8080/formateurs`);
   }
   create(formateur: Formateur): Observable<Formateur> {
-    console.log(formateur);
     return this.httpClient.post<Formateur>(`http://localhost:8080/formateurs`, formateur);
   }
   getCarsSmall(): any {
