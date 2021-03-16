@@ -1,1 +1,42 @@
-<p>responsable-formulaire works!</p>
+<form [formGroup]="responsableForm" (ngSubmit)="onSubmit()" class="form">
+    <h1>Responsable</h1>
+    <div>
+        <label>
+            nom : <input type="text" formControlName="nom">
+        </label>
+    </div>
+    <div>
+        <label>
+            prenom : <input type="text" formControlName="prenom">
+        </label>
+    </div>
+    <div>
+        <label>
+            civilite : <input type="text" formControlName="civilite">
+        </label>
+    </div>
+    <div>
+        <label>
+            fonction : <input type="text" formControlName="fonction">
+        </label>
+    </div>
+    <div>
+        <label>
+            entreprise : <input type="text" formControlName="entreprise">
+        </label>
+    </div>
+    <div>
+        <label>
+            email : <input type="text" formControlName="email">
+        </label>
+    </div>
+    <div>
+        <label>
+            tel : <input type="text" formControlName="tel">
+        </label>
+    </div>
+
+    <button type="submit">enregistrement</button>
+
+
+</form>
