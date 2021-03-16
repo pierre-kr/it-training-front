@@ -1,0 +1,159 @@
+div,
+form,
+input,
+select {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  color: rgb(209, 209, 209);
+}
+p {
+  color: black;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+h2 {
+  margin: 0 0 0 8px;
+}
+
+.main-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 25px;
+  width: 1024px;
+  height: 2000px;
+  margin-top: 0;
+}
+i {
+  color: black;
+}
+.left-part,
+form {
+  padding: 25px;
+}
+
+.left-part {
+  margin-left: 2rem;
+  text-align: center;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fa-graduation-cap {
+  font-size: 72px;
+}
+
+form {
+  background: rgba(0, 0, 0, 0.7);
+  max-width: 400px;
+  height: 900px;
+  margin-top: 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+input,
+select {
+  padding: 5px;
+  margin-bottom: 30px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+input::placeholder {
+  color: #eee;
+}
+
+option:focus {
+  border: none;
+}
+
+option {
+  background: black;
+  border: none;
+}
+
+.checkbox input {
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+}
+
+.checkbox a {
+  color: #26a9e0;
+}
+
+.checkbox a:hover {
+  color: #85d6de;
+}
+
+.btn-item,
+button {
+  padding: 10px 10px;
+  /* margin-top: 20px; */
+  border-radius: 5px;
+  border: none;
+  background: #26a9e0;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.btn-item {
+  display: inline-block;
+  margin: 20px 5px 0;
+}
+
+button {
+  width: 100%;
+  outline: none;
+}
+
+button:hover,
+.btn-item:hover {
+  background: #85d6de;
+}
+.select-theme {
+  margin-bottom: 2rem;
+}
+i {
+  font-size: 48px;
+}
+p-dropdown {
+  margin-left: 2rem;
+  width: 100%;
+}
+@media (min-width: 568px) {
+  .main-block {
+    flex-direction: row;
+    height: calc(100% - 50px);
+  }
+
+  .left-part,
+  form {
+    flex: 1;
+    height: auto;
+  }
+}

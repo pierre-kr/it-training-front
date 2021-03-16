@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     this.authService.loging(identifiants)
     .subscribe(result =>{
       if(result)
-       this.router.navigate(['dashboard']);
+       this.router.navigate(['dashboard/chart']);
       else this.invalidLogin=true;
     });  
   }

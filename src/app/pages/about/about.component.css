@@ -1,0 +1,23 @@
+img {
+  width: 440px;
+}
+
+h1 {
+  font-size: 2em;
+  color: black;
+  font-weight: 1px;
+  line-height: 30px;
+  padding-bottom: 4rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+p {
+  width: 600px;
+  text-align: justify;
+}

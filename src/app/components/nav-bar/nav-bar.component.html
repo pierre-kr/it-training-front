@@ -7,9 +7,9 @@
   </svg>
   <ul class="list nav__list" [ngClass]="[navbarOpen]">
     <li class="nav__item"><a [routerLink]="['/home']">Accueil</a></li>
-    <li class="nav__item"><a [routerLink]="['/evaluation']">A propos</a></li>
+    <li class="nav__item"><a [routerLink]="['/about']">A propos</a></li>
     <li class="nav__item"><a [routerLink]="['/catalogue']">Formations</a></li>
-    <li class="nav__item"><a href="#">Contact</a></li>
+    <li class="nav__item"><a [routerLink]="['/contact']">Contact</a></li>
     <li class="nav__item"><a href="#">S'inscrire</a></li>
     <li class="nav__item" *ngIf="auth.isLoggedIn()">
       <a [routerLink]="['/dashboard/chart']">Dashboard</a>

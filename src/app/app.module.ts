@@ -64,6 +64,8 @@ import { LineChartComponent } from './components/charts-group/line-chart/line-ch
 import { BarChartComponent } from './components/charts-group/bar-chart/bar-chart.component';
 import { DoughnutChartComponent } from './components/charts-group/doughnut-chart/doughnut-chart.component';
 import { SessionComponent } from './components/dashboard/session/session.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 
@@ -96,7 +98,9 @@ import { SessionComponent } from './components/dashboard/session/session.compone
     LineChartComponent,
     BarChartComponent,
     DoughnutChartComponent,
-    SessionComponent
+    SessionComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

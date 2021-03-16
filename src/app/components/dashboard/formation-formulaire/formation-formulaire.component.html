@@ -1,53 +1,3 @@
-<form [formGroup]="formationForm" (ngSubmit)="onSubmit()" class="form">
-    <h1>Formation</h1>
-    <div>
-        <label>
-            audience : <input type="text" formControlName="audience">
-        </label>
-    </div>
-    <div>
-        <label>
-            contenu : <input type="text" formControlName="contenu">
-        </label>
-    </div>
-    <div>
-        <label>
-            description : <input type="text" formControlName="description">
-        </label>
-    </div>
-    <div>
-        <label>
-            lienTest : <input type="text" formControlName="lienTest">
-        </label>
-    </div>
-    <div>
-        <label>
-            prerequis : <input type="text" formControlName="prerequis">
-        </label>
-    </div>
-    <div>
-        <label>
-            reference : <input type="text" formControlName="reference">
-        </label>
-    </div>
-    <div>
-        <label>
-            titre : <input type="text" formControlName="titre">
-        </label>
-    </div>
-
-    <div>
-        <label>Sous themes :
-            <p-dropdown [options]="sousThemes" [(ngModel)]="selectedSousTheme" optionLabel="nom" formControlName="theme"></p-dropdown>
-        </label>
-    </div>
-
-    <button type="submit">enregistrement</button>
-
-
-</form>
-
-
 <!-- <div>
     <label>Domaines :
         <p-dropdown [options]="domaines" [(ngModel)]="selectedDomaine" optionLabel="nom"></p-dropdown>
@@ -58,3 +8,57 @@
         <p-dropdown [options]="themes" [(ngModel)]="selectedTheme" optionLabel="nom"></p-dropdown>
     </label>
 </div> -->
+
+<!-- ****************************************** -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<div class="main-block">
+  <div class="left-part">
+    <i class="fa fa-graduation-cap"></i>
+    <h1>Ajouter une nouvelle formation</h1>
+    <p>
+      Veuillez faire attention à remplir tous les champs du formulaire et donner
+      un theme à la formation pour plus de détail veuillez consulter la doc.
+    </p>
+    <div class="btn-group">
+      <a class="btn-item" href="/dashboard/formation">Documentation</a>
+    </div>
+  </div>
+  <form [formGroup]="formationForm" (ngSubmit)="onSubmit()" class="form">
+    <div class="title">
+      <i class="fas fa-pencil-alt"></i>
+      <h2 style="color: rgb(66, 66, 248)">NOUVELLE FORMATION</h2>
+    </div>
+    <div class="info">
+      <input type="text" formControlName="titre" placeholder="Titre" />
+      <input type="text" formControlName="reference" placeholder="Reference" />
+      <input type="text" formControlName="prerequis" placeholder="Prerequis" />
+      <input type="text" formControlName="audience" placeholder="Public" />
+      <input type="text" formControlName="contenu" placeholder="Contenu" />
+      <input
+        type="text"
+        formControlName="description"
+        placeholder="Description"
+      />
+      <input
+        type="text"
+        formControlName="lienTest"
+        placeholder="Lien de test"
+      />
+      <div class="select-theme">
+        <label
+          >Sous themes :
+          <p-dropdown
+            [options]="sousThemes"
+            [(ngModel)]="selectedSousTheme"
+            optionLabel="nom"
+            formControlName="theme"
+          ></p-dropdown>
+        </label>
+      </div>
+      <button type="submit">Enregistrement</button>
+    </div>
+  </form>
+</div>
