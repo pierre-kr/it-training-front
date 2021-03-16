@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Evaluation } from '../models/Evaluation';
+import { Session } from '../models/Session';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +13,9 @@ export class EvaluationService {
 
   create(evaluation: Evaluation): Observable<Evaluation>{
     return this.httpClient.post<Evaluation>('http://localhost:8080/evaluations', evaluation);
+  }
+
+  findAllSessionsByEmail(email: String): Observable<Session[]>{
+    return this.httpClient.get<Session[]>(`http://localhost:8080/participe/sessions/${email}`);
   }
 }

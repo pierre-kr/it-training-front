@@ -10,6 +10,10 @@ export class ApprenantService {
 
   constructor(private httpClient: HttpClient) { }
 
+  findById(id: number): Observable<Apprenant>{
+    return this.httpClient.get<Apprenant>(`http://localhost:8080/apprenants/${id}`)
+  }
+
   create(apprenant: Apprenant): Observable<Apprenant> {
     return this.httpClient.post<Apprenant>('http://localhost:8080/apprenants', apprenant);
   }

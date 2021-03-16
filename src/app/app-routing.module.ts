@@ -29,7 +29,7 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'catalogue/formation', component: FormationComponent},
   { path: 'inscription/session', component: InscriptionSessionComponent },
-  {path:'formulaire/formation', component:FormationFormulaireComponent},
+  { path: 'formulaire/formation', component: FormationFormulaireComponent },
   {path:'dashboard', component:DashboardComponent,canActivate:[AuthGuardService],children:[
     {path: 'chart',component:ChartsComponent},
     {path: 'formation',component:FormationFormulaireComponent},
@@ -40,9 +40,9 @@ const routes: Routes = [
     {path: 'responsable',component:ResponsableFormulaireComponent},
     {path: 'responsable-liste',component:ResponsableComponent},
   ]},
-  
-  {path: '404', component: PageNotFoundComponent },
-  {path: '**', redirectTo: 'home'}];
+  { path: '404', component: PageNotFoundComponent },
+  { path: 'evaluation/participe', component: EvaluationSessionComponent },
+  { path: '**', redirectTo: '404' }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

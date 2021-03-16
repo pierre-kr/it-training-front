@@ -9,7 +9,7 @@ import { Session } from '../models/Session';
 export class SessionService {
 
   constructor(private httpClient: HttpClient) { }
-  
+
   findById(id: number): Observable<Session> {
     return this.httpClient.get<Session>(`http://localhost:8080/sessions/${id}`);
   }
