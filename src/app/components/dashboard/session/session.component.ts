@@ -31,9 +31,6 @@ export class SessionComponent implements OnInit {
     this.sessionService.getCarsSmall().then(Sessions => { this.sessions = Sessions; console.log(this.sessions); });
 
     this.cols = [
-      { field: 'id', header: 'id' },
-      { field: 'dateDebut', header: 'Date de Debut' },
-      { field: 'dateFin', header: 'Date de Fin' },
       { field: 'duree', header: 'Duree' },
       { field: 'validationSession', header: 'Validation Session' },
       { field: 'prix', header: 'Prix' },

@@ -3,18 +3,52 @@
   <p-table [value]="sessions" dataKey="id" editMode="row">
     <ng-template pTemplate="header">
       <tr>
+        <th>
+          id
+        </th>
+        <th>
+          date Debut
+        </th>
+        <th>
+          date Fin
+        </th>
         <th *ngFor="let col of cols">
           {{ col.header }}
         </th>
       </tr>
     </ng-template>
-    <ng-template
-      pTemplate="body"
-      let-session
-      let-editing="editing"
-      let-ri="rowIndex"
-    >
+    <ng-template pTemplate="body" let-session let-editing="editing" let-ri="rowIndex">
       <tr>
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input pInputText type="text" [(ngModel)]="session.id" />
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ session.id }}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input pInputText type="text" [(ngModel)]="session.dateDebut" />
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ session.dateDebut | date:"dd/MM/yyyy"}}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input pInputText type="text" [(ngModel)]="session.dateFin" />
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ session.dateFin  | date:"dd/MM/yyyy"}}
+            </ng-template>
+          </p-cellEditor>
+        </td>
         <td *ngFor="let col of cols" pEditableColumn>
           <p-cellEditor>
             <ng-template pTemplate="input">
