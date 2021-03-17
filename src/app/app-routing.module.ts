@@ -19,6 +19,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { FormateurComponent } from './components/dashboard/formateur/formateur.component';
 import { SessionComponent } from './components/dashboard/session/session.component';
 import { ResponsableFormulaireComponent } from './components/dashboard/responsable-formulaire/responsable-formulaire.component';
+import { FormationTabComponent } from './components/dashboard/formationTab/formationTab.component';
 
 const routes: Routes = [
 
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:'dashboard', component:DashboardComponent,canActivate:[AuthGuardService],children:[
     {path: 'chart',component:ChartsComponent},
     {path: 'formation',component:FormationFormulaireComponent},
+    {path: 'formation-liste',component:FormationTabComponent},
     {path: 'formateur',component:FormateurFormulaireComponent},
     {path: 'formateur-liste',component:FormateurComponent},
     {path: 'session',component:SessionFormulaireComponent},

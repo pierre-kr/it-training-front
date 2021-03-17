@@ -1,40 +1,83 @@
-* {
-    color: black;
-}
-.formation {
-    padding: 2%;
-}
-
-.titre {
-    width: 75%;
-    padding: 20px;
-    margin: 10px;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
+.container{
+    margin: 0;
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
 }
 
-h2 {
+.header{
+    margin-left: 2rem;
+}
+.card-header{
+    width: 800px;
+    height: 100px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+}
+.formation{
+    width: 800px;
+    margin: 2rem 0rem 2rem 0;
+}
+button{
+    height: 40px;
+    width: 40px;
+    background-color: blue;
+    color: whitesmoke;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    margin: 1rem;
+}
+.b1{
+    background-color: red;
+}
+.b2{
+    background-color: orange;
+}
+.b3{
+    background-color: blue;
+}
+.b4{
+    background-color: green;
+}
+
+h2{
+    color: rgb(20, 20, 20);
+    font-size: 3rem;
+   
+text-transform: uppercase;}
+.titre{
+    font-weight: bold;
+    margin: 1rem 3rem 1rem 1rem;
+    color: orange;
+}
+
+.operation{
+    width: 10rem;
+    text-align: center;
+    margin-right: 3rem;
+}
+
+.operation p{ 
+   font-size: 1.2rem;
+}
+
+.right{
+    width: 600px;
+    height: 700px;
+    margin-top: 8rem;
+    /* border-radius: 7px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5); */
+}
+.info{
+    width: 60rem;
+    height: 30rem;   
     display: flex;
     justify-content: center;
-    width: 75%;
-    margin: auto;
-    color: blue;
 }
-
-.contenu-formation{
-    display: flex;
-    justify-content: center;
-}
-
-.description-formation{
-    width: 75%;
-    background-color: rgb(128, 178, 243);
-    padding: 20px;
-    margin: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.important-info, .session-info {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
+.informations{
+    width: 30rem;
+    height: 30rem;  
 }

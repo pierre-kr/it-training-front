@@ -1,6 +1,65 @@
-<h2>Liste des formations</h2>
-<div class="catalogue">
-    <div *ngFor="let theme of themes">
-        <app-theme-formations [theme]="theme" *ngIf="theme.formations.length != 0"></app-theme-formations>
+<div class="container">
+  <div class="catalogue">
+    <div>
+      <h2>NOS FORMATIONS</h2>
     </div>
+    <div *ngFor="let theme of themes">
+      <app-theme-formations
+        [theme]="theme"
+        *ngIf="theme.formations.length != 0"
+      ></app-theme-formations>
+    </div>
+  </div>
+  <div class="body">
+    <div class="header">
+      <div class="right">
+        <h2>Dans quel domaine souhaitez-vous vous former ?</h2>
+        <span><a class="btn btn1">Developpement</a></span>
+        <span><a class="btn btn2">Big Data</a></span>
+        <span><a class="btn btn3">Réseaux</a></span>
+        <span><a class="btn btn4">Systéme</a></span>
+      </div>
+      <div><img src="../../../assets/images/catalogue.png" alt="" /></div>
+    </div>
+
+    <div class="paragraph">
+      <h3>Formation Inter-Entreprise:</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error tenetur
+        veritatis quae velit doloremque molestias delectus modi quam, vero,
+        illum harum soluta, neque quibusdam quas saepe ratione repudiandae vitae
+        laborum? Delectus adipisci velit vero, saepe quam laudantium animi
+        reiciendis eius nihil dolorem exercitationem quos optio cum nostrum
+        natus veniam consequatur.
+      </p>
+      <h3>Formation Intra-Entreprise:</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error tenetur
+        veritatis quae velit doloremque molestias delectus modi quam, vero,
+        illum harum soluta, neque quibusdam quas saepe ratione repudiandae vitae
+        laborum? Delectus adipisci velit vero, saepe quam laudantium animi
+        reiciendis eius nihil dolorem exercitationem quos optio cum nostrum
+        natus veniam consequatur.
+      </p>
+      <h3>Formation POEC:</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error tenetur
+        veritatis quae velit doloremque molestias delectus modi quam, vero,
+        illum harum soluta, neque quibusdam quas saepe ratione repudiandae vitae
+        laborum? Delectus adipisci velit vero, saepe quam laudantium animi
+        reiciendis eius nihil dolorem exercitationem quos optio cum nostrum
+        natus veniam consequatur.
+      </p>
+      <h3>Autre:</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error tenetur
+        veritatis quae velit doloremque molestias delectus modi quam, vero,
+        illum harum soluta, neque quibusdam quas saepe ratione repudiandae vitae
+        laborum? Delectus adipisci velit vero, saepe quam laudantium animi
+        reiciendis eius nihil dolorem exercitationem quos optio cum nostrum
+        natus veniam consequatur.
+      </p>
+      <a [routerLink]="['/contact']" class="btn btn--primary">Contacter nous</a>
+    </div>
+  </div>
 </div>

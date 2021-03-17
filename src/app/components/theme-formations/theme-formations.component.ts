@@ -1,11 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Formation } from 'src/app/models/Formation';
 import { Theme } from 'src/app/models/Theme';
 
 @Component({
   selector: 'app-theme-formations',
   templateUrl: './theme-formations.component.html',
-  styleUrls: ['./theme-formations.component.css']
+  styleUrls: ['./theme-formations.component.css'],
 })
 export class ThemeFormationsComponent implements OnInit {
 

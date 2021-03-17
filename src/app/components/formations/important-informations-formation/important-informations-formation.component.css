@@ -1,4 +1,4 @@
-.info-important{
+/* .info-important{
     background-color: rgb(128, 178, 243);
     padding: 15px;
     font-size: 15px;
@@ -19,4 +19,19 @@ div {
     display: flex;
     justify-content: center;
     margin: 10px;
+} */
+
+.card{
+    width: 30rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p{
+    color: black;
+}
+
+h2{
+    font-size: 2.5rem;
 }

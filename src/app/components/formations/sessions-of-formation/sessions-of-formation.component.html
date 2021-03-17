@@ -1,12 +1,19 @@
-<div class="sessions">
-    <div class="titre">Sessions</div>
-        <div *ngFor="let session of sessions">
-            <div class="inscription">
-                <p-card>
-                    <p>Session du {{session.dateDebut | date : 'dd/MM/yyyy'}} au {{session.dateFin | date : 'dd/MM/yyyy'}}</p>
-                    <p>Lieu : {{session.lieu.ville}}<br>Prix : {{session.prix}} €</p>
-                    <a [routerLink]="['/inscription/session']" [queryParams]="{id: session.id}"><button pButton type="button" label="Inscription"></button></a>
-                </p-card>
-            </div>
-        </div>
+<h2>Sessions</h2>
+<div class="container">
+  <div *ngFor="let session of sessions">
+    <div class="card-session">
+      <p-card>
+        <p>
+          Session du {{ session.dateDebut | date: "dd/MM/yyyy" }} au
+          {{ session.dateFin | date: "dd/MM/yyyy" }}
+        </p>
+        <p>Lieu : {{ session.lieu.ville }}<br />Prix : {{ session.prix }} €</p>
+        <a
+          [routerLink]="['/inscription/session']"
+          [queryParams]="{ id: session.id }"
+          ><button pButton type="button" label="Inscription"></button
+        ></a>
+      </p-card>
+    </div>
+  </div>
 </div>
