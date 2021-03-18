@@ -1,6 +1,10 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 <div class="container">
   <form class="form-signin" #f="ngForm" (ngSubmit)="signIn(f.value)">
-    <h3>Connexion</h3>
+    <i class="fa fa-user-circle-o"></i>
     <div *ngIf="invalidLogin" class="alert alert-danger">
       <p>email ou mot de passe non valid!</p>
     </div>

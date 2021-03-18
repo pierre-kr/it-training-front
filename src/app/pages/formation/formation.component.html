@@ -1,20 +1,46 @@
-<div class="formation">
-    <div class="contenu-formation">
-        <div class="titre">
-            <h2>{{formation.titre}}</h2>
-        </div>
-        <div class="important-info">
-            <app-important-informations-formation [formation]="formation"></app-important-informations-formation>
-        </div>
+<div class="container">
+  <div class="header">
+    <h2>{{ formation.titre }}</h2>
+    <div class="card-header">
+      <div class="titre">Inscription rapide</div>
+      <div class="operation">
+        <button class="b1">1</button>
+        <p>Choisir votre formation</p>
+      </div>
+      <div class="operation">
+        <button class="b2">2</button>
+        <p>Choisir une date et un lieu</p>
+      </div>
+      <div class="operation">
+        <button class="b3">3</button>
+        <p>Renseignez vos coordonnées</p>
+      </div>
+      <div class="operation">
+        <button class="b4">4</button>
+        <p>On vous contacte</p>
+      </div>
     </div>
-    <div class="contenu-formation">
-        <div class="description-formation">
-            <app-description-formation [description]="formation.description" [contenu]="formation.contenu"
-                [audience]="formation.audience" [prerequis]="formation.prerequis">
-            </app-description-formation>
-        </div>
-        <div class="session-info">
-            <app-sessions-of-formation [sessions]="formation.sessions"></app-sessions-of-formation>
-        </div>
+    <div class="formation">
+      <app-description-formation
+        [description]="formation.description"
+        [contenu]="formation.contenu"
+        [audience]="formation.audience"
+        [prerequis]="formation.prerequis"
+      >
+      </app-description-formation>
     </div>
+  </div>
+  <div class="right">
+    <div class="info">
+      <app-important-informations-formation
+        [formation]="formation"
+        class="informations"
+      ></app-important-informations-formation>
+    </div>
+    <div class="session-info">
+      <app-sessions-of-formation
+        [sessions]="formation.sessions"
+      ></app-sessions-of-formation>
+    </div>
+  </div>
 </div>

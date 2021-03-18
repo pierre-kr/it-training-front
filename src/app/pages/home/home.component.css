@@ -32,11 +32,11 @@ img {
   font-weight: bold;
   outline: 0;
   padding: 1.5rem 5.5rem;
-  background-color: white;
+  background-color: transparent;
 }
 
 .input::placeholder {
-  color: gray;
+  color: #d2d0db;
   opacity: 0.5;
 }
 
@@ -60,7 +60,7 @@ img {
 }
 @media screen and (min-width: 1024px) {
   .input {
-    color: rgb(66, 65, 65);
+    color: rgb(250, 226, 226);
   }
   h1 {
     font-size: 5rem;
