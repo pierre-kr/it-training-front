@@ -1,8 +1,8 @@
 <div class="card">
   <h2>Informations</h2>
-  <p>Durée : {{ formation.sessions[0].duree }} jours</p>
-  <p>Tarif : {{ formation.sessions[0].prix }} €</p>
-  <p>Référence : {{ formation.reference }}</p>
+  <p>Durée : {{ formation?.sessions[0]?.duree }} jours</p>
+  <p>Tarif : {{ formation?.sessions[0]?.prix }} €</p>
+  <p>Référence : {{ formation?.reference }}</p>
   <span class="p-buttonset">
     <button pButton type="button" label="Télécharger"></button>
     <button pButton type="button" label="Imprimer"></button>

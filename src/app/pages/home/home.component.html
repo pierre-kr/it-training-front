@@ -2,7 +2,12 @@
   <form id="search" class="form-container">
     <h1>Trouvez votre formation en salle ou à distance</h1>
     <div class="input-group">
-      <input type="text" class="input" placeholder="Chercher une formation" />
+      <input
+        type="text"
+        class="input"
+        placeholder="Chercher une formation"
+        (keydown.enter)="search($event.target.value)"
+      />
       <span class="icon-container">
         <svg class="icon">
           <use xlink:href="../../../assets/images/sprite.svg#search"></use>

@@ -1,0 +1,14 @@
+.container {
+  margin: 2rem 2rem;
+  width: 1200px;
+  height: 80vh;
+  overflow-y: scroll;
+}
+p {
+  color: rgb(29, 29, 29);
+}
+.message {
+  padding-bottom: 4rem;
+  border-bottom: 1px solid grey;
+  margin-bottom: 4rem;
+}
