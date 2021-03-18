@@ -20,6 +20,7 @@ import { FormateurComponent } from './components/dashboard/formateur/formateur.c
 import { SessionComponent } from './components/dashboard/session/session.component';
 import { ResponsableFormulaireComponent } from './components/dashboard/responsable-formulaire/responsable-formulaire.component';
 import { FormationTabComponent } from './components/dashboard/formationTab/formationTab.component';
+import { ContactDashComponent } from './components/dashboard/contact-dash/contact-dash.component';
 
 const routes: Routes = [
 
@@ -42,6 +43,7 @@ const routes: Routes = [
     {path: 'session-liste',component:SessionComponent},
     {path: 'responsable',component:ResponsableFormulaireComponent},
     {path: 'responsable-liste',component:ResponsableComponent},
+    {path: 'contact',component:ContactDashComponent}
   ]},
   { path: '404', component: PageNotFoundComponent },
   { path: 'evaluation/participe', component: EvaluationSessionComponent },

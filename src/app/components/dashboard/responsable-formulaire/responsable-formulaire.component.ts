@@ -21,8 +21,6 @@ export class ResponsableFormulaireComponent implements OnInit {
       email: [''],
       tel: ['']
     });
-
-    this.responsableService.findAll().subscribe((responsable) => { console.log(responsable); });
   }
 
   ngOnInit(): void {
