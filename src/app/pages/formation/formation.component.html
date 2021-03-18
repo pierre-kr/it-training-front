@@ -1,6 +1,6 @@
 <div class="container">
   <div class="header">
-    <h2>{{ formation.titre }}</h2>
+    <h2>{{ formation?.titre }}</h2>
     <div class="card-header">
       <div class="titre">Inscription rapide</div>
       <div class="operation">
@@ -22,10 +22,10 @@
     </div>
     <div class="formation">
       <app-description-formation
-        [description]="formation.description"
-        [contenu]="formation.contenu"
-        [audience]="formation.audience"
-        [prerequis]="formation.prerequis"
+        [description]="formation?.description"
+        [contenu]="formation?.contenu"
+        [audience]="formation?.audience"
+        [prerequis]="formation?.prerequis"
       >
       </app-description-formation>
     </div>
@@ -39,7 +39,7 @@
     </div>
     <div class="session-info">
       <app-sessions-of-formation
-        [sessions]="formation.sessions"
+        [sessions]="formation?.sessions"
       ></app-sessions-of-formation>
     </div>
   </div>

@@ -70,6 +70,8 @@ import { SessionComponent } from './components/dashboard/session/session.compone
 import { FormationTabComponent } from './components/dashboard/formationTab/formationTab.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ResponsableService } from './services/responsable.service';
+import { ContactDashComponent } from './components/dashboard/contact-dash/contact-dash.component';
 
 
 
@@ -105,7 +107,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     SessionComponent,
     FormationTabComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ContactDashComponent
   ],
   imports: [
     BrowserModule,
@@ -135,7 +138,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     PanelModule,
     CardModule
   ],
-  providers: [FormateurService, AuthService, AuthGuardService],
+  providers: [FormateurService, AuthService, AuthGuardService,ResponsableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
