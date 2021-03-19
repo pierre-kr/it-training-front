@@ -15,6 +15,12 @@
         <th *ngFor="let col of cols">
           {{ col.header }}
         </th>
+        <th>
+          Formateur
+        </th>
+        <th>
+          Formation
+        </th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-session let-editing="editing" let-ri="rowIndex">
@@ -45,7 +51,7 @@
               <input pInputText type="text" [(ngModel)]="session.dateFin" />
             </ng-template>
             <ng-template pTemplate="output">
-              {{ session.dateFin  | date:"dd/MM/yyyy"}}
+              {{ session.dateFin | date:"dd/MM/yyyy"}}
             </ng-template>
           </p-cellEditor>
         </td>
@@ -56,6 +62,26 @@
             </ng-template>
             <ng-template pTemplate="output">
               {{ session[col.field] }}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input pInputText type="text" [(ngModel)]="session.formateur.nom" />
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ session.formateur?.nom }}
+            </ng-template>
+          </p-cellEditor>
+        </td>
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input pInputText type="text" [(ngModel)]="session.formation.titre" />
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{ session.formation?.titre }}
             </ng-template>
           </p-cellEditor>
         </td>

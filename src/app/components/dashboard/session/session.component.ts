@@ -36,10 +36,7 @@ export class SessionComponent implements OnInit {
       { field: 'prix', header: 'Prix' },
       { field: 'reference', header: 'Reference' },
       { field: 'salle', header: 'Salle' },
-      { field: 'type', header: 'Type' },
-      { field: 'formateur.nom', header: 'Formateur' },
-      { field: 'formation.titre', header: 'Formation' },
-      { field: 'lieu.ville', header: 'Lieu' }
+      { field: 'type', header: 'Type' }
     ];
   }
 }
